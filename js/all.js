@@ -12,13 +12,13 @@ function get_image_title(){
     let title_b;
     switch (rdm){
         case 1:
-            image = "url('/yli311/images/cover/jupiter.jpg')";
+            image = "url('images/cover/jupiter.jpg')";
             title_a = 'Credit: NASA-Juno mission.';
             // title_b = 'See Jupiter’s southern hemisphere in beautiful detail in this new image taken by NASA’s Juno spacecraft. The color-enhanced view captures one of the white ovals in the “String of Pearls,” one of eight massive rotating storms at 40 degrees south latitude on the gas giant planet. The image was taken on Oct. 24, 2017 at 11:11 a.m. PDT (2:11 p.m. EDT), as Juno performed its ninth close flyby of Jupiter. At the time the image was taken, the spacecraft was 20,577 miles (33,115 kilometers) from the tops of the clouds of the planet at a latitude of minus 52.96 degrees. The spatial scale in this image is 13.86 miles/pixel (22.3 kilometers/pixel).';
             title_b = '';
             break;
         case 2:
-            image = "url('/yli311/images/cover/PerX.jpg')";
+            image = "url('/images/cover/PerX.jpg')";
             title_a = 'Credit: NASA-APOD. The Perseus Cluster Waves.';
             // title_b =  'The cosmic swirl and slosh of giant waves in an enormous reservoir of glowing hot gas are traced in this enhanced X-ray image from the Chandra Observatory. The frame spans over 1 million light-years across the center of the nearby Perseus Galaxy Cluster, some 240 million light-years distant. Like other clusters of galaxies, most of the observable mass in the Perseus cluster is in the form of the cluster-filling gas. With temperatures in the tens of millions of degrees, the gas glows brightly in X-rays. Computer simulations can reproduce details of the structures sloshing through the Perseus cluster’s X-ray hot gas, including the remarkable concave bay seen below and left of center. About 200,000 light-years across, twice the size of the Milky Way, the bay’s formation indicates that Perseus itself was likely grazed by a smaller galaxy cluster billions of years ago.';
             title_b = '';
@@ -118,12 +118,12 @@ function get_header(html){
     let header_bars =  document.createElement('div')
     header_bars.id='header-menu-bars'
     header_bars.innerHTML=`
-        <div class="menu-bar-box"><a href="/yli311/index.html"> HOME </a></div>
-        <div class="menu-bar-box"><a href="/yli311/Vitae.html"> VITAE </a></div>
-        <div class="menu-bar-box"><a href="/yli311/Research.html">RESEARCH</a></div>
-        <div class="menu-bar-box"><a href="/yli311/Publications.html">PUBLICATIONS</a></div>
-        <div class="menu-bar-box"><a href="/yli311/Astrotoday.html">ASTROTODAY</a></div>
-        <div class="menu-bar-box"><a href="/yli311/Links.html">LINKS</a></div>
+        <div class="menu-bar-box"><a href="index.html"> HOME </a></div>
+        <div class="menu-bar-box"><a href="Vitae.html"> VITAE </a></div>
+        <div class="menu-bar-box"><a href="Research.html">RESEARCH</a></div>
+        <div class="menu-bar-box"><a href="Publications.html">PUBLICATIONS</a></div>
+        <div class="menu-bar-box"><a href="Astrotoday.html">ASTROTODAY</a></div>
+        <div class="menu-bar-box"><a href="Links.html">LINKS</a></div>
     `
     header.appendChild(header_frame)
     header.appendChild(header_bars)
