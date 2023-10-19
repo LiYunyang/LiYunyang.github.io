@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yunyang Li">
+    <meta name="description" content="personal research website">
+    <link rel="stylesheet" type="text/css" href="css/new_all.css">
+    <link rel="stylesheet" href="font/fontawesome-all.css">
+    <link rel="stylesheet" href="font/css/academicons.css">
+    <link rel="shortcut icon" href="images/YL_blue.png" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$$','$$'], ['$','$']]}});</script>
+    <script type="text/javascript" async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <title>Yunyang Li | Research</title>
+</head>
+<style>
+    a.paper{
+        color: black;
+        font-weight: 600;
+    }
+    a.paper:hover{
+        color: rgba(var(--rgb-theme));
+        filter: brightness(1.8);
+    }
+    .block-title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 4vw;
+        padding: 0.5em 0;
+        border-left: 2px solid transparent;
+    }
+    .block-info img{
+        width: 80%;
+        margin: 1em auto;
+        display: block;
+    }
+    .block-info img.img-center{
+        width: 100%;
+        margin: 1em auto;
+        display: block;
+        }
+    .block-info p:not(:first-child){
+        margin-top: 0.8em;
+    }
+    .block-info img:first-child{
+        margin-top: 0.2em;
+    }
+    .drop-cap::first-letter{
+        font-size: 3.2em;
+        color: rgba(var(--rgb-theme));
+        float: left;
+        line-height: 0.8;
+        margin-top: 0.1em;
+        margin-right: 0.2em;
+    }
+    code.figure-credit{
+        font-size: smaller;
+    }
+    .block-info img:hover ~ .figure-credit{
+        background-color: rgba(var(--rgb-theme), 0.3);
+        filter: contrast(1);
+        border-radius: 0.3em;
+        box-sizing: content-box;
+    }
+    @media only
+    screen and (min-device-width: 480px) and (min-width: 600px),
+    screen and (orientation: landscape){
+        .content-block:after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .block-title{
+            text-align: left;
+            font-weight: 400;
+            font-size: min(3vw, 30px);
+            padding-left: 0.5em;
+            transform: translateX(-0.5em);
+        }
+        .content-block:hover .block-title{
+            font-weight: 800;
+            border-left-color: rgba(var(--rgb-theme));
+        }
+        .block-info img.img-right{
+            width: 40%;
+            margin-left: 0.5em;
+            float: right;
+        }
+        .block-info img.img-center{
+            width: min(100%, 600px);
+            margin: auto auto;
+            display: block;
+            float: none;
+        }
+        .block-info img.img-left{
+            width: 40%;
+            margin-right: 0.5em;
+            margin-left: 0;
+            float: left;
+        }
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="content-block">
+            <div class="block-title">Cosmology Large Angular Scale Surveyor</div>
+            <div class="block-info">
+                <img class="img-right" src="images/q-band-night-milky-way.jpg" style="width:min(200px, 50%); border-radius: 12px"/>
+                <p class="drop-cap">
+                    Polarization of the cosmic microwave background (CMB) is a powerful probe of the early universe.
+                    While the small angular scale fluctuations of the CMB temperature and polarization maps encode
+                    details about the geometry, composition, evolution and initial conditions of the universe,
+                    the large-angular-scale polarizations provide supplementary and essential insights into the
+                    reionization history as well as the primordial gravitational waves predicted by the postulated
+                    inflationary models.
+                </p>
+                <p>
+                    <a class="hover" href="https://sites.krieger.jhu.edu/class" target="_blank">Cosmology Large Angular Scale Surveyor</a>
+                    (CLASS) aims to answer these questions by
+                    measuring the large-angular-scale polarizations from the ground.
+                    CLASS is a four-frequency (40, 90, 150, and 220 GHz) polarimetric telescope array
+                    located in the Atacama desert in northern Chile that has seen the first light in 2016.
+                    Over the years, we have come to a good understanding of the instrument and the stabilities of the data,
+                    released data products that characterize the Galactic foreground emissions, and also made contributions
+                    to planetary and atmospheric sciences.
+                </p>
+                <p>Stay tuned for more CLASS results to come!</p>
+                <code class="figure-credit">Figure credit: M. Petroff</code>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-title">CLASS 40 GHz Survey</div>
+            <div class="block-info">
+                <p class="drop-cap">
+                    <img class="img-left" src="images/q_band_QUV_2x2.png"/>
+                    CLASS 40 GHz telescope has begun its survey in 2016.
+                    The data collected during 2016-2022 are processed and characterized as described in
+                    <a class="paper figure-credit" href="https://ui.adsabs.harvard.edu/abs/2023arXiv230501045L/abstract" target="_blank">Li et. al., 2023a</a>,
+                    and the maps are available on <a class="hover" href="https://lambda.gsfc.nasa.gov/product/class/index.html" target="_blank">LAMBDA</a>.
+                    This is the first demonstration of the large-angular scale polarization recovery from ground-based telescopes at 40 GHz.
+                    Our initial observation and data processing recovers 75% of the power at angular scales $\ell=20$ and 45% of power down to $\ell=10.$
+                    These maps are used to study the Galactic foregrounds from synchrotron emission (<a class="paper" href="https://ui.adsabs.harvard.edu/abs/2023arXiv230900675E/abstract" target="_blank">Eimer et. al., 2023</a>),
+                    and to place the tightest upper limit on the astrophysical circular polarization background.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-title">Atmospheric Cloud Polarization</div>
+            <div class="block-info">
+                <p class="drop-cap"> Ground-based CMB experiments all face challenges from the atmosphere.
+                    Polarization experiments are less susceptible to the atmospheric effects,
+                    even on large angular scales since the atmosphere is <em>mostly</em> not linearly polarized
+                    (though, check out our detection of the <a class="paper" href="https://ui.adsabs.harvard.edu/abs/2020ApJ...889..120P/abstract" target="_blank"> atmospheric circular polarization</a>).
+                    Clouds, however, can be a linear polarization source due its Rayleigh scattering of the ambient thermal radiation.
+                    <img class="img-right" src="images/cloud_pol.svg"/>
+                    In <a class="paper figure-credit" href="https://ui.adsabs.harvard.edu/abs/2023arXiv230907221L/abstract" target="_blank">Li et. al., 2023b</a>,
+                    we used the multi-frequency data of CLASS telescopes to study the cloud events at 40, 90, 150, and 220 GHz.
+                    Polarization transients localized in sky coordinates are found to be highly correlated with cloud events seen from optical images.
+                    These polarization signals are mostly 90-degree oriented (Stokes $-Q$ signals), consistent with the ice crystal scattering.
+                    The spectra of the cloud events are roughly consistent with the Rayleigh scattering model, although, there could be effects from
+                    liquid water absorption and Mie-scattering that cause deviation from the standard power-law.
+                </p>
+                <p>
+                    This work demonstrates that cloud is a contributor to the atmospheric linear polarization,
+                    and has important implications for ongoing and future CMB experiments from the ground.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-title">Is the Universe Cooling Adiabatically?</div>
+            <div class="block-info">
+                <p class="drop-cap">
+                    According to the standard cosmology model, the radiation field temperature decreases as
+                    $T_\mathrm{CMB}(z) = T_0 (1+z)$ as the universe expands adiabatically.
+                    However, this fundamental assumption is difficult to test due to the lack of "thermometers" in the distant universe.
+                    <img class="img-center" src="images/T_cmb.png"/>
+                    In <a class="paper figure-credit" href="https://ui.adsabs.harvard.edu/abs/2021ApJ...922..136L/abstract" target="_blank">Li et. al., 2021</a>,
+                    we use the galaxy clusters detected by the <a class="hover" href="https://act.princeton.edu/" target="_blank"> Atacama Cosmology Telescope</a>
+                    to test this relationship.
+                    The hot circumgalactic medium up-scatters the CMB photon through the thermal Sunyaev-Zel'dovich (SZ) effect, which is
+                    sensitive to local CMB temperature during the scattering.
+                    Leveraging this effect, we confirmed no deviation from the adiabatic model up to `z\approx1.4`.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-title">The Circumgalactic Medium</div>
+            <div class="block-info">
+                <img class="img-left" src="images/hotgashalo.jpg" style="border-radius: 12px"/>
+                <p>
+                The hot gas makes up a significant portion of mass of galaxies and galaxy clusters, and is important in
+                regulating their cosmic evolution.
+                The million-Kelvin-gas glow in the soft X-ray band. Though very faint, the emission of strong lines,
+                along with absorption against bright source are used to study the Milky Way and external galaxies.
+                In <a class="paper" href="https://ui.adsabs.harvard.edu/abs/2017ApJ...849..105L/abstract">Li & Bregman 2017</a> we studied
+                the optical depth effect from the turbulence of the hot gas in the circumgalactic medium of the MW using
+                Monte Carlo radiative transfer simulations.
+                This analysis revised the previous estimates of the hot gas profile of the Milky Way based on Oxygen emission lines,
+                and update the Galactic baryon budget.
+            </p>
+                <p>
+                Future missions will promote this study to a higher level where high spectral (and spatial) resolution
+                line diagnoses would be possible.
+            </p>
+                <code class="figure-credit">Figure credit: Tumlinson et. al., (2017)</code>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-title">Compact Objects</div>
+            <div class="block-info">
+                <p>
+                    Pulsars are extreme astrophysical labs. Despite their various manifestations, the internal
+                    composition remains elusive due to the difficulties in both the theoretical and observational ends.
+                </p>
+                <img class="img-right"  src="images/M-R.jpg"/>
+                <p>
+                    A <b>strangeon star</b> model is prospective in solving these problems. In this picture, a gigantic
+                    nucleus made of equal number of u, d, s quarks (strangeon) is more stable at about the nuclear
+                    density due to its extra degree of freedom.
+                    Strangeon star, being bounded by the residual strong interaction, has a stiff equation-of-state,
+                    and could thus be both massive and low-mass.
+                    This model has been successfully applied to explain the emission properties of "anomalous" pulsars
+                    like X-ray Dim Isolated Neutron Stars (XDINSs, <a class="paper" href="https://ui.adsabs.harvard.edu/abs/2018RAA....18...82W/abstract">Wang et. al., 2018</a>)
+                    and Central Compact Objects (<a class="paper" href="https://ui.adsabs.harvard.edu/abs/2018ApJ...854..165L/abstract">Li et. al., 2018</a>).
+                    Other phenomena related to compact objects such as merger (<a class="paper" href="https://ui.adsabs.harvard.edu/abs/2018RAA....18...24L/abstract">Lai et. al., 2018</a>),
+                    glitches, and fast radio bursts could all be better understood in this way.
+                </p>
+                <code class="figure-credit">Figure credit: Lai & Xu (2017)</code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

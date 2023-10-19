@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yunyang Li">
+    <meta name="description" content="personal research website">
+    <link rel="stylesheet" href="font/fontawesome-all.css">
+    <link rel="stylesheet" href="font/css/academicons.css">
+    <link rel="stylesheet" type="text/css" href="css/new_all.css">
+    <link rel="shortcut icon" href="images/YL_blue.png" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.js"></script>
+    <title>Yunyang Li | Links</title>
+</head>
+<style>
+    .row-container{
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .link-box{
+        text-align: center;
+        flex: 0 0 4em;
+        border-radius: 1em;
+        position: relative;
+        margin-bottom: 0.2em;
+        background-color: rgba(var(--rgb-theme));
+        font-weight: 500;
+    }
+    .link-box > span{
+        font-size: var(--font-size-main);
+        display: block;
+        color: white;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0.4em;
+    }
+    .link-box:hover > span{font-size: 1.08em;}
+    .link-box:active > span{color: rgba(255, 255, 255, 0.4); font-size: 1.12em;}
+    .link-box:active{filter: grayscale(0.5);}
+    .link-fixed{-webkit-box-flex: 0;}
+    .link-flex{-webkit-box-flex: 1;}
+
+    .link-box[href*='arxiv']:hover{background-color: #b42024}
+    .link-box[href*='matplotlib']:hover{background-color: #075679}
+    .link-box[href*='color_picker']:hover{background-color: #ac9580}
+    .link-box[href*='heasarc']:hover{background-color: #2e2e2e}
+    .link-box[href*='atomdb']:hover{background-color: #fcc6b6}
+    .link-box[href*='pla']:hover{background-color: #8a2439}
+    .link-box[href*='map.gsfc']:hover{background-color: #006896}
+    .link-box[href*='iopscience.iop.org']:hover{background-color: #0071ae}
+    .link-box[href*='nxsa-web']:hover{background-color: #003663}
+    .link-box[href*='ned']:hover{background-color: #006cf8}
+    .link-box[href*='voxcharta']:hover{background-color: #ac9580}
+    .link-box[href*='ptable']:hover{background-color: #007ef6}
+    .link-box[href*='adsabs']:hover{background-color: #1e4899}
+    .link-box[href*='simbad']:hover{background-color: #2e7d8b}
+    .link-box[href*='chaser']:hover{background-color: #003ea5}
+    .link-box[href*='apod']:hover{background-color: #0051b8}
+    .link-box[href*='omar']:hover{background-color: #f17734}
+    .link-box[href*='avon']:hover{background-color: #f17734}
+    .link-box[href*='annualreviews']:hover{background-color:#41898f}
+    .link-box[href*='astropy']:hover{background-color:#ff5226 }
+    .link-box[href*='sdss']:hover{background-color:#605a9f}
+    .link-box[href*='athena']:hover{background-color: #7e4694}
+    .link-box[href*='physics-astronomy.jhu']:hover{background-color:#003174}
+    .link-box[href*='nist']:hover{background-color:#d5acad }
+    .link-box[href*='class']:hover{background-color: #0063b3}
+    .link-box[href*='stsci']:hover{background-color: #418dc6}
+    .link-box[href*='colloquia']:hover{background-color: #1585d9}
+    .link-box[href*='lambda']:hover{background-color: #004a0c}
+    .link-box[href*='phpBB']:hover{background-color: #0088c8}
+    .link-box[href*='github']:hover{background-color: #24292e}
+    .link-box[href*='cade']:hover{background-color: #2a9ad7}
+
+    @media only
+    screen and (min-width: 600px) and (min-device-width: 480px),
+    screen and (orientation: landscape)
+    /*or (orientation: landscape)*/
+    {
+        :root{
+            --box-height: min(14vw, 100px);
+        }
+        .row-container{
+            flex-direction: row;
+            justify-content: space-between;
+            margin: auto;
+            height: var(--box-height);
+            width: calc(6*var(--box-height));
+        }
+        .link-box{
+            box-sizing: content-box;
+            text-align: center;
+            margin: 0 2px;
+            flex: 0 0 calc(var(--box-height) - 4px);
+            height: calc(var(--box-height) - 4px);
+            border-radius: 0;
+        }
+        .link-flex{flex: 1 0 0;}
+        .row-container:first-of-type .link-box:first-child{border-top-left-radius: 1em;}
+        .row-container:first-of-type .link-box:last-child{border-top-right-radius: 1em;}
+        .row-container:last-of-type .link-box:first-child{border-bottom-left-radius: 1em;}
+        .row-container:last-of-type .link-box:last-child{border-bottom-right-radius: 1em;}
+        .row-container:first-of-type .link-box:first-child a{border-top-left-radius: 1em;}
+        .row-container:first-of-type .link-box:last-child a{border-top-right-radius: 1em;}
+        .row-container:last-of-type .link-box:first-child a{border-bottom-left-radius: 1em;}
+        .row-container:last-of-type .link-box:last-child a{border-bottom-right-radius: 1em;}
+    }
+
+</style>
+<body>
+    <div class="content">
+        <div class="content-block">
+            <div class="row-container">
+                <a class="link-box link-flex" href="https://ui.adsabs.harvard.edu" target="_blank"><span>ads</span></a>
+                <a class="link-box link-fixed" href="https://arxiv.org/list/astro-ph/new" draggable="true" target="_blank"><span>astro-ph</span></a>
+                <a class="link-box link-fixed" href="https://www.annualreviews.org/loi/astro" target="_blank"><span>ara&a</span></a>
+                <a class="link-box link-flex" href="http://jhu.voxcharta.org" target="_blank"><span>vox charta</span></a>
+            </div>
+            <div class="row-container">
+                <a class="link-box link-fixed" href="http://sites.krieger.jhu.edu/class" target="_blank"><span>class</span></a>
+                <a class="link-box link-fixed" href="http://simbad.u-strasbg.fr/simbad/" target="_blank"><span>simbad</span></a>
+                <a class="link-box link-fixed" href="http://docs.astropy.org/en/stable/index.html" target="_blank"><span>astropy</span></a>
+                <a class="link-box link-flex" href="http://physics-astronomy.jhu.edu" target="_blank"><span>jhu</span></a>
+                <a class="link-box link-fixed" href="http://www.stsci.edu" target="_blank"><span>stsci</span></a>
+            </div>
+            <div class="row-container">
+                <a class="link-box link-fixed" href="https://github.com/LiYunyang" target="_blank"><span>github</span></a>
+                <a class="link-box link-flex" href="http://matplotlib.org/index.html" target="_blank"><span>matplotlib</span></a>
+                <a class="link-box link-fixed" href="https://heasarc.gsfc.nasa.gov" target="_blank"><span>heasarc</span></a>
+                <a class="link-box link-fixed" href="http://www.stsci.edu/institute/smo/events/colloquia" target="_blank"><span>colloquia</span></a>
+            </div>
+            <div class="row-container">
+                <a class="link-box link-fixed" href="https://map.gsfc.nasa.gov/" target="_blank"><span>wmap</span></a>
+                <a class="link-box link-fixed" href="https://lambda.gsfc.nasa.gov" target="_blank"><span>lambda</span></a>
+                <a class="link-box link-flex" href="http://pla.esac.esa.int/pla/#home" target="_blank"><span>planck legacy archive</span></a>
+                <a class="link-box link_fixed" href="http://cade.irap.omp.eu/dokuwiki/doku.php?id=start" target="_blank"><span>cade</span></a>
+            </div>
+            <div class="row-container">
+                <a class="link-box link-fixed" href="https://www.ptable.com/#Property/State" target="_blank"><span>ptable</span></a>
+                <a class="link-box link-fixed" href="https://physics.nist.gov/PhysRefData/ASD/lines_form.html" target="_blank"><span>nist</span></a>
+                <a class="link-box link-fixed" href="http://www.atomdb.org/Webguide/webguide.php" target="_blank"><span>atomdb</span></a>
+                <a class="link-box link-fixed" href="https://apod.nasa.gov/apod/astropix.html" target="_blank"><span>apod</span></a>
+                <a class="link-box link-flex" href="https://www.sdss.org/" target="_blank"><span>sdss</span></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

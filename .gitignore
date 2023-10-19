@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+*.min.js
+images/
+font/
+cgi-bin/
+publications/

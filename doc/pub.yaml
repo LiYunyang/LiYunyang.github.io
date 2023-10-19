@@ -1,0 +1,111 @@
+---
+firstauthor:
+    -   title: "CLASS Observations of Atmospheric Cloud Polarization at Millimeter Wavelengths"
+        authors: <b>Yunyang Li</b> & CLASS Collaboration
+        year: 2023
+        journal_code: ApJ Accepted
+        journal_ref: https://ui.adsabs.harvard.edu/abs/2023arXiv230907221L/abstract
+        local_ref: ''
+    -   title: "CLASS Data Pipeline and Maps for 40 GHz Observations through 2022"
+        authors: <b>Yunyang Li</b> & CLASS Collaboration
+        year: 2023
+        journal_code: ApJ 956 77
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/acf293
+        local_ref: publications/Li_2023_ApJ_956_77.pdf
+    -   title: "Constraining Cosmic Microwave Background Temperature Evolution With Sunyaev–Zel’Dovich Galaxy Clusters from the Atacama Cosmology Telescope"
+        authors: <b>Yunyang Li</b>, Adam D. Hincks & ACT Collaboration
+        year: 2021
+        journal_code: ApJ 922 136
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/ac26b6
+        local_ref: publications/Li_2021_ApJ_922_136.pdf
+    -   title: "Calvera: A Low-mass Strangeon Star Torqued by Debris Disk?"
+        authors: <b>Yunyang Li</b>, Weiyang Wang, Mingyu Ge, Xiongwei Liu, Hao Tong, Renxin Xu
+        year: 2018
+        journal_code: ApJ 854 165
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/aaa671
+        local_ref: publications/Li_2018_ApJ_854_165
+    -   title: "The Properties of the Galactic Hot Gaseous Halo from X-Ray Emission"
+        authors: <b>Yunyang Li</b> & Joel N. Bregman
+        year: 2017
+        journal_code: ApJ 849 105
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/aa92c6
+        local_ref: publications/Li_2017_ApJ_849_105.pdf
+coauthor:
+#    -   title: ""
+#        authors:
+#        year:
+#        journal_code:
+#        journal_ref:
+#        local_ref: publications/
+    -   title: "CLASS Angular Power Spectra and Map-Component Analysis for 40 GHz Observations through 2022"
+        authors: Joseph R. Eimer; <b>Yunyang Li</b> & CLASS Collaboration
+        year: 2023
+        journal_code: ApJ submitted
+        journal_ref:
+        local_ref: publications/
+    -   title: "Cosmology Large Angular Scale Surveyor (CLASS): 90~GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance"
+        authors: Rahul Datta; Michael K. Brewer; Jullianna Denes Couto; Joseph R. Eimer; <b>Yunyang Li</b> & CLASS Collaboration
+        year: 2023
+        journal_code: ApJ submitted
+        journal_ref:
+        local_ref: publications/
+    -   title: "Microwave Observations of Venus with CLASS"
+        authors: Sumit Dahal & <b>CLASS Collaboration</b>
+        year: 2023
+        journal_code: PSJ 4 154
+        journal_ref: https://iopscience.iop.org/article/10.3847/PSJ/acee76
+        local_ref: publications/Dahal_2023_Planet._Sci._J._4_154.pdf
+    -   title: "Testing CMB Anomalies in E-mode Polarization with Current and Future Data"
+        authors: Rui Shi & <b>CLASS Collaboration</b>
+        year: 2023
+        journal_code: ApJ 945 79
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/acb339
+        local_ref: publications/Shi_2023_ApJ_945_79.pdf
+    -   title: "Calibration of Transition-edge Sensor (TES) Bolometer Arrays with Application to CLASS"
+        authors: John W. Appel & <b>CLASS Collaboration</b>
+        year: 2022
+        journal_code: ApJS 262 52
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4365/ac8cf2/
+        local_ref: publications/Appel_2022_ApJS_262_52.pdf
+    -   title: "Four-year Cosmology Large Angular Scale Surveyor (CLASS) Observations: On-sky Receiver Performance at 40, 90, 150, and 220 GHz Frequency Bands"
+        authors: Sumit Dahal & <b>CLASS Collaboration</b>
+        year: 2022
+        journal_code: ApJ 926 33
+        journal_ref:
+        local_ref: publications/Dahal_2022_ApJ_926_33.pdf
+    -   title: "Two Year Cosmology Large Angular Scale Surveyor (CLASS) Observations: Long Timescale Stability Achieved with a Front-end Variable-delay Polarization Modulator at 40 GHz"
+        authors: Kathleen Harrington & <b>CLASS Collaboration</b>
+        year: 2021
+        journal_code: ApJ 922 212
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/ac2235/
+        local_ref: publications/Harrington_2021_ApJ_922_212.pdf
+    -   title: "Two-year Cosmology Large Angular Scale Surveyor (CLASS) Observations: 40 GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance"
+        authors: Zhilei Xu, Michael K. Brewer, Pedro Fluxá Rojas, <b>Yunyang Li</b>, ...
+        year: 2020
+        journal_code: ApJ 891 134
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/ab76c2
+        local_ref: publications/Xu_2020_ApJ_891_134.pdf
+    -   title: "Two-year Cosmology Large Angular Scale Surveyor (CLASS) Observations: A Measurement of Circular Polarization at 40 GHz"
+        authors: Ivan L. Padilla, Joseph R. Eimer, <b>Yunyang Li</b> & CLASS Collaboration
+        year: 2020
+        journal_code: ApJ 889 105P
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/ab61f8
+        local_ref: publications/Padilla_2020_ApJ_889_105.pdf
+    -   title: The Extended Distribution of Baryons Around Galaxies
+        authors: Joel N. Bregman, Michael E. Anderson, Matthew J. Miller, Edmund Hodges-Kluck, Xinyu Dai, Jiang-Tao Li, <b>Yunyang Li</b>, Zhijie Qu
+        year: 2018
+        journal_code: ApJ 862 003
+        journal_ref: http://iopscience.iop.org/article/10.3847/1538-4357/aacafe
+        local_ref: publications/Bregman_2018_ApJ_862_3.pdf
+    -   title: "The optical/UV excess of X-ray-dim isolated neutron star II. nonuniformity of plasma on strangeon star surface"
+        authors: Weiyang Wang, Yi Feng, Xiaoyu Lai, <b>Yunyang Li</b>, Jiguang Lu, Xuelei Chen, Renxin Xu
+        year: 2018
+        journal_code: RAA 18 082
+        journal_ref: http://iopscience.iop.org/article/10.1088/1674-4527/18/7/82/meta
+        local_ref: publications/Wang_2018_Res._Astron._Astrophys._10_082.pdf
+    -   title: "Merging Strangeon Star"
+        authors: Xiaoyu Lai, Yunwei Yu, Enping Zhou, <b>Yunyang Li</b>, Renxin Xu
+        year: 2018
+        journal_code: RAA 18 024
+        journal_ref: http://iopscience.iop.org/article/10.1088/1674-4527/18/2/24/meta
+        local_ref: publications/Lai_2018_Res._Astron._Astrophys._18_024.pdf

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yunyang Li">
+    <meta name="description" content="personal research website">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/new_all.css">
+    <link rel="stylesheet" href="font/fontawesome-all.css">
+    <link rel="stylesheet" href="font/css/academicons.css">
+    <link rel="shortcut icon" href="images/YL_blue.png" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.js"></script>
+    <title>Yunyang Li | Vitae</title>
+</head>
+<style>
+    .content-block:first-of-type{margin-bottom: 0;}
+    #cv-pdf{
+        margin:auto;
+        display: block;
+        width: max-content;
+    }
+    .cv-title span{
+        display: inline-block;
+        text-align: center;
+        font-weight: 700;
+        font-size: calc(var(--font-size-main)*0.8);
+        width: 100%;
+    }
+    .cv-item span{display: block;}
+    .cv-item-head{font-weight: 600;}
+    .cv-item-body{
+        font-weight: 400;
+        font-size: calc(var(--font-size-main));
+        text-align: right;
+    }
+    @media only
+    screen and (min-device-width: 480px) and (min-width: 600px),
+    screen and (orientation: landscape){
+        #cv-pdf{margin-right: 0;}
+        .cv-block{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cv-title{
+            width: 10em;
+            text-align: right;
+            flex-grow: 0;
+            flex-shrink: 0;
+            transform: translateX(-8px);
+        }
+        .cv-title span{
+            border-right: 2px solid transparent;
+            padding-right: 8px;
+            text-align: right;
+        }
+        .cv-item{
+            flex-grow: 1;
+            padding-left: 10px;
+        }
+        .cv-block:hover > .cv-title span{
+            border-right-color:rgba(var(--rgb-theme));
+            font-weight: 800;
+        }
+        .cv-item-inline{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .cv-block{margin-top: 1em;}
+</style>
+<body>
+    <div class="content">
+        <div class="content-block">
+            <a id="cv-pdf" class="shield-a" href="doc/cv_YL.pdf">
+                <img id="badgeImage" class='shied-img' src="">
+            </a>
+
+        </div>
+        <div class="content-block">
+            <div class="cv-block">
+                <div class="cv-title"><span>EDUCATION</span></div>
+                <div class="cv-item">
+                    <div class="cv-item-block">
+                        <span class="cv-item-head">Johns Hopkins University</span>
+                        <span class="cv-item-body">
+                            <span>Ph.D. candidate, (2018-)</span>
+                            <span>advisor:
+                                <a class="hover" href="http://physics-astronomy.jhu.edu/directory/tobias-marriage/" target="_blank">
+                                Tobias A. Marriage</a>
+                            </span>
+                            <span>references:
+                                <a class="hover" href="https://cosmos.pha.jhu.edu/bennett/" target="_blank">Charles L. Bennett</a>,
+                                <a class="hover" href="https://www.astro.utoronto.ca/~ahincks" target="_blank">Adam D. Hincks</a>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cv-item-block">
+                        <span class="cv-item-head">Peking University</span>
+                        <span class="cv-item-body">
+                            <span>B.S., Physics (2013-2017)</span>
+                            <span>Thesis advisor:
+                                <a class="hover" href="https://lsa.umich.edu/astro/people/core-faculty/jbregman.html" target="_blank">
+                                    Joel N. Bregman</a> (U of Mich.)</span>
+                            <span>references:
+                                <a class="hover" href="https://psr.pku.edu.cn/rxx" target="_blank">Renxin Xu</a>,
+                                <a class="hover" href="https://kavli.pku.edu.cn/~peng/index.html" target="_blank">Eric W. Peng</a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="cv-block">-->
+<!--                <div class="cv-title"><span>SELECTED AWARDS</span></div>-->
+<!--                <div class="cv-item">-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">May-the-Fourth Scholarship</span>-->
+<!--                        <span class="cv-item-body">Peking University, 2016</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">Visiting Scholarship</span>-->
+<!--                        <span class="cv-item-body">China Scholarship Council, 2016</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">Academic Excellence Award</span>-->
+<!--                        <span class="cv-item-body">Peking University, 2016</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">Social Work Award</span>-->
+<!--                        <span class="cv-item-body">Peking University, 2014</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">Mizuho Bank Scholarship</span>-->
+<!--                        <span class="cv-item-body">BDFZ, 2013</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="cv-block">-->
+<!--                <div class="cv-title"><span>TEACHING</span></div>-->
+<!--                <div class="cv-item">-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">Introduction to Galaxies and Active Galactic Nuclei (TA, 171.314)</span>-->
+<!--                        <span class="cv-item-body">JHU, Spring, 2020</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">General Physics II (TA, 171.104)</span>-->
+<!--                        <span class="cv-item-body">JHU, Spring, 2019</span>-->
+<!--                    </div>-->
+<!--                    <div class="cv-item-inline">-->
+<!--                        <span class="cv-item-head">General Physics Laboratory II (TA, 173.112)</span>-->
+<!--                        <span class="cv-item-body">JHU, Spring, 2019</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="cv-block">
+                <div class="cv-title"><span>PUBLICATIONS</span></div>
+                <div class="cv-item">
+                    <div class="cv-item-inline">
+                        <span class="cv-item-head"><a class="hover" href="Publications.html">List of publications</a></span>
+                        <span class="cv-item-body">h-index: 8; citation: 280</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function getLastModifiedTime(url, callback) {
+  // Create a HEAD request to get the headers
+  fetch(url, { method: 'HEAD' })
+    .then(response => {
+      // Check if the request was successful
+      if (response.ok) {
+        // Retrieve the Last-Modified header
+        const lastModifiedHeader = response.headers.get('Last-Modified');
+
+        // Parse the Last-Modified date
+        const lastModifiedDate = new Date(lastModifiedHeader);
+
+        // Call the callback with the last modified date
+        callback(lastModifiedDate);
+      } else {
+        // Call the callback with null if there was an issue
+        callback(null);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching headers:', error);
+      // Call the callback with null in case of an error
+      callback(null);
+    });
+}
+
+    // Example usage
+    const pdfUrl = 'doc/cv_YL.pdf';
+    getLastModifiedTime(pdfUrl, lastModifiedDate => {
+
+  const badgeImage = document.getElementById('badgeImage');
+
+  if (lastModifiedDate) {
+    // Format the date as "Month abbreviation YYYY"
+    const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+    // Get the current month and year
+    const currentMonth = (new Date()).getMonth();
+    const currentYear = (new Date()).getFullYear();
+
+    // Compare with the current month and year
+    const isCurrentMonth = lastModifiedDate.getMonth() === currentMonth && lastModifiedDate.getFullYear() === currentYear;
+
+    // Generate the URL for the badge image
+    const badgeColor = isCurrentMonth ? 'green' : 'red';
+    const badgeUrl = `https://img.shields.io/badge/PDF-${formattedDate}-${badgeColor}.svg`;
+
+    // Set the src attribute of the image
+    badgeImage.src = badgeUrl;
+  } else {
+    lastModifiedTimeElement.textContent = 'Unable to retrieve the Last Modified Time.';
+  }
+});
+</script>
+
+</html>

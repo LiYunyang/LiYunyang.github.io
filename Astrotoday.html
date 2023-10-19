@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yunyang Li">
+    <meta name="description" content="personal research website">
+    <link rel="stylesheet" href="font/fontawesome-all.css">
+    <link rel="stylesheet" href="font/css/academicons.css">
+    <link rel="shortcut icon" href="images/YL_blue.png" />
+    <link  href="https://arxiv.org/archive/astro-ph"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/new_all.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/astrotoday.js" async></script>
+    <script src="js/all.js"></script>
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$$','$$'], ['$','$']]}});</script>
+    <script type="text/javascript" async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <title>Yunyang Li | Astro Today</title>
+</head>
+<style>
+    /*AstroToday CSS*/
+    .content{padding-top: 0}
+    #loading {
+        width:100%;
+        height:100%;
+        margin: auto;
+        z-index: 9999;
+        background: url(images/gif/a.gif) center no-repeat #fff;
+        background-position-y: top;
+        background-size: 50%;
+    }
+    #at-arxiv-toggle-box{
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: calc(6*var(--menu-box-width));
+        background-color: rgba(240, 240, 240, 1);
+        padding: 0.5em 0;
+        margin: 0.3em auto;
+        justify-content: space-around;
+        z-index: 100;
+        border-radius: 1em;
+    }
+    .at-arxiv-toggle{
+        text-align: center;
+        width: calc(var(--content-width)/28 * 3);
+        height: calc(var(--content-width)/28 * 1.85);
+        line-height: calc(var(--content-width)/28 * 1.85);
+        border-radius: 0.6em;
+        display: inline-flex;
+        justify-content: center;
+        font-size: calc(var(--content-width)/28);
+        color: white;
+        font-weight: lighter;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+        cursor: pointer;
+    }
+    .at-item{margin: auto;}
+    .at-item:not(:last-of-type){margin-bottom: 1em;}
+    .at-head{margin: 1em auto;}
+    .shied-img{margin: 0 auto;}
+
+    .at-header{width: 100%;}
+    .at-num{
+        height: auto;
+        line-height: 0;
+    }
+    .at-num span{
+        font-size: calc(var(--font-size-main)*0.6);
+        line-height: 1;
+        background-color: rgba(var(--rgb-theme), 0.2);
+        border-radius: 6px;
+        padding: 0 6px;
+    }
+    .at-title-title{
+        font-size: calc(var(--font-size-main)*1.25);
+        font-weight: 600;
+    }
+    .at-title-tags{
+        display: flex;
+        justify-content: flex-start;
+        font-size: calc(var(--font-size-main)*0.8);
+        line-height: 1;
+    }
+    .at-tag{
+        padding: 0.2em 0.4em;
+        border-radius: 0.4em;
+        margin-right: 0.2em;
+        color: white;
+    }
+    .at-arxiv-tag{background-color: brown;}
+    .at-authors{
+        font-size: calc(var(--font-size-main)*0.82);
+        line-height: 1.2;
+        font-weight: 400;
+    }
+    .at-authors *:not(:first-of-type){
+        color: rgba(var(--rgb-theme), 0.4);
+        font-size: calc(var(--font-size-main)*0.72);
+    }
+    .at-authors > a{border-radius: 3px;}
+    .at-authors > a:hover{background-color: rgba(123,176,210,0.51);}
+
+    .at-abstract{
+        color: var(--color-text);
+        font-size: calc(var(--font-size-main)*1.1);
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    mark{
+        background-color: #fffd38;
+        padding-left: 2px;
+        padding-right: 2px;
+        color: black;
+        border-radius: 0.5em;
+        font-weight: bold;
+    }
+
+    /*===================*/
+    @media only
+    screen and (min-device-width: 480px)and (min-width: 600px),
+    screen and (orientation: landscape){
+        :root{
+            --content-block-width: 80vw;
+        }
+        .at-arxiv-toggle{
+            font-size: calc(25px);
+            height: calc(25px *1.85);
+            width: calc(25px * 3);
+            line-height: calc(25px * 1.85);
+        }
+        .at-item{max-width: 40em;}
+        .at-item:not(:last-of-type){margin-bottom: 2em;}
+        .at-header{position: relative}
+        .at-num{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(calc(-100% - 2px), 50%);
+        }
+        .at-num span{
+            font-size: calc(var(--font-size-main)*0.8);
+        }
+    }
+    @media only screen and (max-device-width:480px) and (orientation: portrait){
+        #loading{
+            background-size: 100%;
+        }
+    }
+    @media only
+    screen and (min-device-width: 480px)and (min-width: 85em),
+    screen and (orientation: landscape) and (min-width: 85em){
+        .content-block:not(.at-head){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .at-item{
+            flex: 0 0 32em;
+            margin: 2em;
+            max-width: 32em;
+        }
+    }
+    @media only screen and (orientation: portrait){:root{--content-block-width: 95vw !important;}}
+
+</style>
+<body>
+    <div class="content">
+        <div id="loading"></div>
+        <div id="at-arxiv-toggle-box" class="at-block tag_div" style="visibility: hidden"></div>
+        <div class="content-block at-head at-collapse_block" id="replaceable_new_date"  onclick="collapseWholeBlock()"></div>
+        <div id="replaceable-new" class="content-block"></div>
+        <div class="content-block at-head at-collapse_block" id="replaceable_crs_date"  onclick="collapseWholeBlock()"></div>
+        <div id="replaceable-crs" class="content-block"></div>
+    </div>
+</body>
+</html>

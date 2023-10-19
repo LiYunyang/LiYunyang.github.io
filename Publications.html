@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yunyang Li">
+    <meta name="description" content="personal research website">
+    <link rel="shortcut icon" href="images/YL_blue.png" />
+    <link rel="stylesheet" href="font/fontawesome-all.css">
+    <link rel="stylesheet" href="font/css/academicons.css">
+    <link rel="stylesheet" type="text/css" href="css/new_all.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js-yaml.min.js"></script>
+    <script src="js/publication.js" async></script>
+    <script src="js/all.js"></script>
+    <title>Yunyang Li | Publications</title>
+</head>
+<style>
+    .content-block.first-author:before{
+        content: "As First Author";
+        font-weight: 600;
+        text-align: center;
+        display: block;
+    }
+    .content-block.second-author:before{
+        content: "As Co-author";
+        font-weight: 600;
+        text-align: center;
+        display: block;
+    }
+    .pub-item:not(:last-of-type){margin-bottom: 1em;}
+    .pub-info{
+        font-family: Courier, monospace;
+        display: flex;
+        justify-content: flex-end;
+        font-size: calc(var(--font-size-main)*0.8);
+    }
+    .pub-info a span:not(:first-child){
+        margin-left: 4px;
+        font-stretch: condensed;
+    }
+    .pub-info *:last-child{margin-left: 2px}
+    .pub-title a{
+        color: black;
+        font-weight: 600;
+        font-size: calc(var(--font-size-main)*1.2);
+        line-height: 0;
+    }
+    .pub-title span{
+        display: block;
+        font-weight: 300;
+        font-size: var(--font-size-main);
+
+    }
+    .pub-title span b{font-weight: 600;}
+    @media only
+    screen and (min-device-width: 480px) and (min-width: 600px),
+    screen and (orientation: landscape){
+        .pub-item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .pub-info{
+            flex-direction: column;
+            align-items: flex-end;
+            flex: 0 0 8em;
+            padding-right: 6px;
+            margin-right: 6px;
+            border-right: 2px solid transparent;
+        }
+        .pub-title a {font-weight: 500;}
+        .pub-item:hover .pub-info{border-right-color: rgba(var(--rgb-theme));}
+    }
+
+</style>
+<body>
+    <div class="content">
+        <div class="content-block first-author"></div>
+        <div class="content-block second-author"></div>
+    </div>
+</body>
+</html>
