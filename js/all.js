@@ -111,7 +111,7 @@ function get_header(html){
     let header_bars =  document.createElement('div')
     header_bars.id='header-menu-bars'
     header_bars.innerHTML=`
-        <div class="menu-bar-box"><a href="index.html"> HOME </a></div>
+        <div class="menu-bar-box"><a href="."> HOME </a></div>
         <div class="menu-bar-box"><a href="Vitae.html"> VITAE </a></div>
         <div class="menu-bar-box"><a href="Research.html">RESEARCH</a></div>
         <div class="menu-bar-box"><a href="Publications.html">PUBLICATIONS</a></div>
