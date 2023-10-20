@@ -1,10 +1,3 @@
-window.onload = function () {
-    let html = window.location.pathname.split("/").pop().split('.')[0]
-    console.log(html)
-    if(Array('Vitae', 'Research', 'Publications', 'Astrotoday', 'Links').includes(html)){get_header(html)}
-    get_footer()
-};
-
 function get_image_title(){
     let rdm = Math.floor(Math.random()*10) + 1;
     let image;
@@ -138,8 +131,6 @@ function get_header(html){
 }
 
 function get_footer(){
-
-
     let footer = document.createElement('div')
     footer.id='footer'
     footer.classList.add('no-text-select')
@@ -214,4 +205,33 @@ function get_footer(){
     $('body')[0].appendChild(footer)
 }
 
+function insert_stats_tracker(){
+    // Create a new script element
+    let statCounterCode = `<!-- Default Statcounter code for Yunyang@JHUhttps://liyunyang.github.io/ -->
+        <script type="text/javascript">
+            var sc_project=11775224; 
+            var sc_invisible=0; 
+            var sc_security="b5b94723"; 
+            var scJsHost = "https://";
+            document.write("<sc"+"ript type='text/javascript' src='" +
+            scJsHost+"statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="Web Analytics"
+            href="https://statcounter.com/" target="_blank"><img
+            class="statcounter"
+            src="https://c.statcounter.com/11775224/0/b5b94723/0/"
+            alt="Web Analytics"
+            referrerPolicy="no-referrer-when-downgrade"></a></div>
+        </noscript>
+       <!-- End of Statcounter Code -->`
+    document.body.insertAdjacentHTML('beforeend', statCounterCode);
+}
+
+window.onload = function () {
+    let html = window.location.pathname.split("/").pop().split('.')[0]
+    console.log(html)
+    if(Array('Vitae', 'Research', 'Publications', 'Astrotoday', 'Links').includes(html)){get_header(html)}
+    get_footer();
+    insert_stats_tracker();
+};
 
