@@ -216,15 +216,30 @@ function insert_stats_tracker(){
             document.write("<sc"+"ript type='text/javascript' src='" +
             scJsHost+"statcounter.com/counter/counter.js'></"+"script>");
         </script>
-        <noscript><div class="statcounter"><a title="Web Analytics"
-            href="https://statcounter.com/" target="_blank"><img
-            class="statcounter"
-            src="https://c.statcounter.com/11775224/0/b5b94723/0/"
-            alt="Web Analytics"
-            referrerPolicy="no-referrer-when-downgrade"></a></div>
-        </noscript>
        <!-- End of Statcounter Code -->`
     document.body.insertAdjacentHTML('beforeend', statCounterCode);
+
+    // Manually create and append the noscript content
+    let noscriptElement = document.createElement("noscript");
+
+    let div = document.createElement("div");
+    div.className = "statcounter";
+
+    let a = document.createElement("a");
+    a.title = "Web Analytics";
+    a.href = "https://statcounter.com/";
+    a.target = "_blank";
+
+    let img = document.createElement("img");
+    img.className = "statcounter";
+    img.src = "https://c.statcounter.com/11775224/0/b5b94723/0/";
+    img.alt = "Web Analytics";
+    img.referrerPolicy = "no-referrer-when-downgrade";
+
+    a.appendChild(img);
+    div.appendChild(a);
+    noscriptElement.appendChild(div);
+    document.body.appendChild(noscriptElement);
 }
 
 window.onload = function () {
