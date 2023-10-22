@@ -207,6 +207,10 @@ function get_footer(){
 
 function insert_stats_tracker(){
     // Create a new script element
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+        return;
+    }
+
     let statCounterCode = `<!-- Default Statcounter code for Yunyang@JHUhttps://liyunyang.github.io/ -->
         <script type="text/javascript">
             var sc_project=11775224; 
