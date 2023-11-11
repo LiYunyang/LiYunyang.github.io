@@ -42,16 +42,19 @@
     .pub-title a{
         color: black;
         font-weight: 600;
-        font-size: calc(var(--font-size-main)*1.2);
+        font-size: calc(var(--font-size-main)*1);
         line-height: 0;
+        font-style: normal;
     }
     .pub-title span{
         display: block;
         font-weight: 300;
-        font-size: var(--font-size-main);
+        font-size: calc(var(--font-size-main)*0.8);
+    }
+    .pub-title span b{
+        font-weight: 600;
 
     }
-    .pub-title span b{font-weight: 600;}
     @media only
     screen and (min-device-width: 480px) and (min-width: 600px),
     screen and (orientation: landscape){
@@ -69,7 +72,10 @@
             margin-right: 6px;
             border-right: 2px solid transparent;
         }
-        .pub-title a {font-weight: 500;}
+        .pub-title a {
+            font-weight: 500;
+            font-style: italic;
+        }
         .pub-item:hover .pub-info{border-right-color: rgba(var(--rgb-theme));}
     }
 

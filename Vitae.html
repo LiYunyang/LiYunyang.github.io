@@ -35,6 +35,45 @@
         font-size: calc(var(--font-size-main));
         text-align: right;
     }
+    .cv-talk-title{
+        font-weight: 400;
+        display: flex;
+        /*flex-wrap: nowrap; !* Prevents flex items from wrapping *!*/
+        /*align-items: center;*/
+
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        align-items: flex-start;
+    }
+
+    .cv-talk-title span:first-child{
+        font-style: italic;
+    }
+    .cv-talk-title span:first-child *{
+        font-style: normal
+    }
+
+    .cv-talk-title span{
+        display: inline;
+    }
+    .cv-talk-title a i{
+        color: rgba(var(--rgb-theme), 0.8);
+    }
+
+    .talk-badge{
+        border-radius: 5px; /* Rounded corners */
+        padding: 2px 2px; /* Padding inside the span */
+        margin-left: 2px; /* Space before the span */
+        /* Additional styling */
+        color: white; /* Text color */
+        font-size: 0.6em; /* Adjust font size as needed */
+        display: inline; /* Inline display */
+        height: 0.5em;
+        line-height: 0.5em;
+        vertical-align: baseline;
+        position: relative;
+        bottom: 0.2em;
+    }
+    .talk-badge-inv {background-color: #949494; /* Grey background */}
     @media only
     screen and (min-device-width: 480px) and (min-width: 600px),
     screen and (orientation: landscape){
@@ -56,7 +95,7 @@
             text-align: right;
         }
         .cv-item{
-            flex-grow: 1;
+            flex-grow: 3;
             padding-left: 10px;
         }
         .cv-block:hover > .cv-title span{
@@ -85,7 +124,8 @@
                     <div class="cv-item-block">
                         <span class="cv-item-head">Johns Hopkins University</span>
                         <span class="cv-item-body">
-                            <span>Ph.D. candidate, (2018-)</span>
+                            <span>Ph.D. candidate, (2020-)</span>
+                            <span>M.A., (2018-2020)</span>
                             <span>advisor:
                                 <a class="hover" href="http://physics-astronomy.jhu.edu/directory/tobias-marriage/" target="_blank">
                                 Tobias A. Marriage</a>
@@ -154,6 +194,45 @@
 <!--                </div>-->
 <!--            </div>-->
             <div class="cv-block">
+                <div class="cv-title"><span>SELECTED TALKS</span></div>
+                <div class="cv-item">
+                    <div class="cv-item-inline">
+                        <div class="cv-talk-title">
+                            <span>
+                                Towards recovery of the largest-scale polarization with CLASS: Data Pipeline Development and First Linear Polarization Survey Results
+                            </span>
+                        </div>
+                        <span class="cv-item-body">AAS 243 Dissertation Talk, New Orleans, 2024</span>
+                    </div>
+                    <div class="cv-item-inline">
+                        <div class="cv-talk-title">
+                            <span class="cv-talk-inv">
+                                CLASS: Recent Progress and the 40 GHz Results
+                                <a class="talk-append" title="" href="https://indico.slac.stanford.edu/event/8405/attachments/3525/9753/video1305542900.mp4" target="_blank">
+                                    <i class="fa fa-video"></i>
+                                </a>
+                                <a class="talk-append" title="" href="https://indico.slac.stanford.edu/event/8405/attachments/3525/9777/FPD_seminar_20231031_compressed.pdf" target="_blank">
+                                    <i class="fa fa-file-pdf"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <span class="cv-item-body">FPD Seminar, SLAC, 2023</span>
+                    </div>
+                    <div class="cv-item-inline">
+                        <div class="cv-talk-title">
+                            <span class="cv-talk-inv">
+                                CLASS: Recent Progress and the 40 GHz Results
+                            </span>
+                        </div>
+                        <span class="cv-item-body">W&C Seminar, JHU, 2023</span>
+                    </div>
+                    <div class="cv-item-inline">
+                        <div class="cv-talk-title"><span class="cv-talk-inv">Constraints on CMB Temperature evolution with SZ clusters</span></div>
+                        <span class="cv-item-body">W&C Seminar, JHU, 2020</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-block">
                 <div class="cv-title"><span>PUBLICATIONS</span></div>
                 <div class="cv-item">
                     <div class="cv-item-inline">
@@ -221,6 +300,23 @@
     lastModifiedTimeElement.textContent = 'Unable to retrieve the Last Modified Time.';
   }
 });
+
+    function createBadge() {
+        var badge = document.createElement('span');
+        badge.classList.add('talk-badge'); // Add a class for styling
+        badge.classList.add('talk-badge-inv'); // Add a class for styling
+        badge.textContent = 'invited'; // Set the badge text here
+        return badge;
+    }
+    document.querySelectorAll('.cv-talk-inv').forEach(function(talkInv) {
+    // Find the first non-text child (like an <a> tag)
+        var firstNonTextChild = Array.from(talkInv.childNodes).find(node => node.nodeType !== Node.TEXT_NODE);
+
+    // Insert the badge before the first non-text child
+        talkInv.insertBefore(createBadge(), firstNonTextChild);
+    });
+
+
 </script>
 
 </html>

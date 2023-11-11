@@ -209,7 +209,7 @@ button > i.fa{background: transparent;}
     font-family: 'Crimson Text', serif;
     padding: 1em 0 2em 0;
     border-top: 1px solid rgba(160, 160, 160, 1);
-
+    position: relative;
 }
 
 #footer > .copyright{
@@ -242,11 +242,15 @@ button > i.fa{background: transparent;}
     visibility: hidden;
     opacity: 0;
 }
-#footer:hover> #last-edit{
+
+
+#footer:hover #last-edit{
     visibility: visible;
     opacity: 1;
+    /*display: block;*/
     transition: 0.5s linear;
 }
+
 #signature{
     margin: auto;
     align-items: center;
