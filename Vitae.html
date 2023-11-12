@@ -34,6 +34,7 @@
         font-weight: 400;
         font-size: calc(var(--font-size-main));
         text-align: right;
+        color: var(--color-text);
     }
     .cv-talk-title{
         font-weight: 400;
@@ -73,6 +74,7 @@
         position: relative;
         bottom: 0.2em;
     }
+    .cv-block{margin-top: 1em;}
     .talk-badge-inv {background-color: #949494; /* Grey background */}
     @media only
     screen and (min-device-width: 480px) and (min-width: 800px),
@@ -106,8 +108,11 @@
             display: flex;
             justify-content: space-between;
         }
+        .cv-item-inline > *:not(:first-child) {
+            margin-left: 2em; /* Adjust the value as needed */
+        }
     }
-    .cv-block{margin-top: 1em;}
+
 </style>
 <body>
     <div class="content">
@@ -198,8 +203,7 @@
                 <div class="cv-item">
                     <div class="cv-item-inline">
                         <div class="cv-talk-title">
-                            <span>
-                                Towards recovery of the largest-scale polarization with CLASS: Data Pipeline Development and First Linear Polarization Survey Results
+                            <span>Towards recovery of the largest-scale polarization with CLASS: Data Pipeline Development and First Linear Polarization Survey Results
                             </span>
                         </div>
                         <span class="cv-item-body">AAS 243 Dissertation Talk, New Orleans, 2024</span>
@@ -235,7 +239,7 @@
                 <div class="cv-item">
                     <div class="cv-item-inline">
                         <span class="cv-item-head"><a class="hover" href="Publications.html">List of publications</a></span>
-                        <span class="cv-item-body">h-index: 8; citation: 280</span>
+                        <span class="cv-item-body">h-index: 8; citation: 300</span>
                     </div>
                 </div>
             </div>
@@ -303,6 +307,8 @@
         var badge = document.createElement('span');
         badge.classList.add('talk-badge'); // Add a class for styling
         badge.classList.add('talk-badge-inv'); // Add a class for styling
+        badge.classList.add('no-text-select'); // Add a class for styling
+
         badge.textContent = 'invited'; // Set the badge text here
         return badge;
     }

@@ -28,7 +28,8 @@
         transition: height 200ms;
     }
     :root{
-        --icon-size: 5vw;
+        --icon-size: 3vw;
+        --icon-size-large: 6vw;
         --icon-text-size: 3vw;
         --rgb-info-text: 125, 125, 125;
     }
@@ -104,11 +105,12 @@
     }
     .icon-row{
         justify-content: space-between;
-        height: var(--icon-size);
-        line-height: var(--icon-size);
+        height: var(--icon-size-large);
+        line-height: var(--icon-size-large);
         align-items: baseline;
     }
     .contact-info i{font-size: var(--icon-size)}
+    .contact-info.icon-only i{font-size: var(--icon-size-large)}
     .contact-info a{color: #777777;}
     .contact-info span{color: rgba(var(--rgb-info-text));}
     .contact-info.home:hover i{color: rgba(var(--rgb-theme));}
@@ -171,7 +173,8 @@
     screen and (min-device-width: 480px) and (min-width: 600px),
     screen and (orientation: landscape){
         :root{
-            --icon-size: min(5vw, 24px);
+            --icon-size: min(3vw, 20px);
+            --icon-size-large: min(6vw, 30px);
             --icon-text-size: min(2vw, 16px);
         }
         .content-block{
