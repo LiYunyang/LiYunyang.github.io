@@ -101,7 +101,7 @@
         text-align: center;
     }
     .contact-info{
-        justify-content: space-between;
+        justify-content: right;
         font-size: var(--icon-text-size);
     }
     .icon-row{
@@ -110,7 +110,14 @@
         line-height: var(--icon-size-large);
         align-items: baseline;
     }
-    .contact-info i{font-size: var(--icon-size)}
+    .contact-info i{
+        font-size: var(--icon-size);
+    }
+    .email i{
+        top: 0.1em;
+        position: relative;
+        margin-right: .2em;
+    }
     .contact-info.icon-only i{font-size: var(--icon-size-large)}
     .contact-info a{color: #777777;}
     .contact-info span{color: rgba(var(--rgb-info-text));}
