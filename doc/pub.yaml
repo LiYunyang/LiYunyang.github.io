@@ -3,9 +3,9 @@ firstauthor:
     -   title: "CLASS Observations of Atmospheric Cloud Polarization at Millimeter Wavelengths"
         authors: <b>Yunyang Li</b> & CLASS Collaboration
         year: 2023
-        journal_code: ApJ Accepted
-        journal_ref: https://ui.adsabs.harvard.edu/abs/2023arXiv230907221L/abstract
-        local_ref: ''
+        journal_code: ApJ 958 154
+        journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/ad0233
+        local_ref: publications/Li_2023_ApJ_958_154.pdf
     -   title: "CLASS Data Pipeline and Maps for 40 GHz Observations through 2022"
         authors: <b>Yunyang Li</b> & CLASS Collaboration
         year: 2023
