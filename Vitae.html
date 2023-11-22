@@ -45,7 +45,12 @@
         flex-wrap: wrap; /* Allows items to wrap to the next line */
         align-items: flex-start;
     }
+    .cv-talk-title:hover{
+        /*text-decoration: underline;*/
+        font-weight: 600;
+        letter-spacing: -0.0176em;
 
+    }
     .cv-talk-title span:first-child{
         font-style: italic;
     }
@@ -105,11 +110,19 @@
             font-weight: 800;
         }
         .cv-item-inline{
-            display: flex;
-            justify-content: space-between;
+            /*display: flex;*/
+            /*justify-content: space-between;*/
+            display: flex; /* Use Flexbox */
+            flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+            align-items: center; /* Align items vertically in the center */
+            gap: 0;
+        }
+        .cv-item-body {
+            flex: 1; /* Allow items to grow and fill the space */
+            white-space: nowrap; /* Optional: Prevent text from wrapping */
         }
         .cv-item-inline > *:not(:first-child) {
-            margin-left: 2em; /* Adjust the value as needed */
+            /*margin-left: 2em; !* Adjust the value as needed *!*/
         }
     }
 
