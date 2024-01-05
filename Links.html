@@ -30,7 +30,7 @@
         background-color: rgba(var(--rgb-theme));
         font-weight: 500;
     }
-    .link-box > span{
+    .link-box > span:last-child{
         font-size: var(--font-size-main);
         display: block;
         color: white;
@@ -38,6 +38,24 @@
         position: absolute;
         bottom: 0;
         margin-bottom: 0.4em;
+    }
+    .link-box-logo{
+        font-size: var(--font-size-main);
+        display: block;
+        color: white;
+        /*background-color: rgb(70, 70, 70);*/
+        background-color: unset;
+        /*background-color: rgba(calc(var(--rgb-theme) * 0.5));*/
+        position: absolute;
+        right: 0;
+        /*margin-top: 0.1em;*/
+        /*margin-right: 0.1em;*/
+        height: 2em;
+        width: 2em;
+        clip-path: polygon(0 0%, 100% 0, 100% 100%);
+        border-top-right-radius: 1em;
+        background-size: cover; /* Adjust this property */
+        background-position: center; /* Optional: center the background image */
     }
     .link-box:hover > span{font-size: 1.08em;}
     .link-box:active > span{color: rgba(255, 255, 255, 0.4); font-size: 1.12em;}
@@ -59,11 +77,16 @@
     .link-box[href*='ptable']:hover{background-color: #007ef6}
     .link-box[href*='adsabs']:hover{background-color: #1e4899}
     .link-box[href*='simbad']:hover{background-color: #2e7d8b}
+    .link-box[href*='openai']:hover{background-color: #75a99b}
+
     .link-box[href*='chaser']:hover{background-color: #003ea5}
     .link-box[href*='apod']:hover{background-color: #0051b8}
     .link-box[href*='omar']:hover{background-color: #f17734}
     .link-box[href*='avon']:hover{background-color: #f17734}
+    .link-box[href*='simonsobservatory']:hover{background-color: #F26522}
+    .link-box[href*='darkenergysurvey']:hover{background-color: #F9250A}
     .link-box[href*='annualreviews']:hover{background-color:#41898f}
+    .link-box[href*='overleaf']:hover{background-color:#158a06}
     .link-box[href*='astropy']:hover{background-color:#ff5226 }
     .link-box[href*='sdss']:hover{background-color:#605a9f}
     .link-box[href*='athena']:hover{background-color: #7e4694}
@@ -100,6 +123,9 @@
             height: calc(var(--box-height) - 4px);
             border-radius: 0;
         }
+        .link-box-logo{
+            border-radius: 0;
+        }
         .link-flex{flex: 1 0 0;}
         .row-container:first-of-type .link-box:first-child{border-top-left-radius: 1em;}
         .row-container:first-of-type .link-box:last-child{border-top-right-radius: 1em;}
@@ -109,6 +135,8 @@
         .row-container:first-of-type .link-box:last-child a{border-top-right-radius: 1em;}
         .row-container:last-of-type .link-box:first-child a{border-bottom-left-radius: 1em;}
         .row-container:last-of-type .link-box:last-child a{border-bottom-right-radius: 1em;}
+
+        .row-container:first-of-type .link-box:last-child .link-box-logo{border-top-right-radius: 1em;}
     }
 
 </style>
@@ -116,21 +144,68 @@
     <div class="content">
         <div class="content-block">
             <div class="row-container">
-                <a class="link-box link-flex" href="https://ui.adsabs.harvard.edu" target="_blank"><span>ads</span></a>
-                <a class="link-box link-fixed" href="https://arxiv.org/list/astro-ph/new" draggable="true" target="_blank"><span>astro-ph</span></a>
-                <a class="link-box link-fixed" href="https://www.annualreviews.org/loi/astro" target="_blank"><span>ara&a</span></a>
-                <a class="link-box link-flex" href="http://jhu.voxcharta.org" target="_blank"><span>vox charta</span></a>
+                <a class="link-box link-flex" href="https://ui.adsabs.harvard.edu" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://ui.adsabs.harvard.edu/styles/img/transparent_logo.svg');"></span>
+                    <span>ads</span>
+                </a>
+                <a class="link-box link-fixed" href="https://arxiv.org/list/astro-ph/new" draggable="true" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://static.arxiv.org/images/arxiv-logo-one-color-white.svg');"></span>
+                    <span>astro-ph</span>
+                </a>
+                <a class="link-box link-fixed" href="https://simonsobservatory.org/"target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://i0.wp.com/simonsobservatory.org/wp-content/uploads/2021/03/SO_Logo_final_large_reversed.png?resize=1536%2C1536&ssl=1');"></span>
+                    <span>SO</span>
+                </a>
+                <a class="link-box link-flex" href="http://sites.krieger.jhu.edu/class" target="_blank">
+                    <span class="link-box-logo" style="background-image: url('https://sites.krieger.jhu.edu/class/files/2018/06/cropped-Untitled-300x300.png');"></span>
+                    <span>class</span>
+                </a>
             </div>
             <div class="row-container">
-                <a class="link-box link-fixed" href="http://sites.krieger.jhu.edu/class" target="_blank"><span>class</span></a>
-                <a class="link-box link-fixed" href="http://simbad.u-strasbg.fr/simbad/" target="_blank"><span>simbad</span></a>
-                <a class="link-box link-fixed" href="http://docs.astropy.org/en/stable/index.html" target="_blank"><span>astropy</span></a>
+                <a class="link-box link-fixed" href="https://www.overleaf.com/project"target="_blank"><span class="link-box-logo" style="background-image:url('https://www.overleaf.com/touch-icon-192x192.png');"></span><span>overleaf</span></a>
+                <a class="link-box link-fixed" href="http://docs.astropy.org/en/stable/index.html" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('http://docs.astropy.org/en/stable//_static/astropy_logo.ico');"></span>
+                    <span>astropy</span></a>
+                <a class="link-box link-flex" href="https://chat.openai.com/"target="_blank">
+                    <span class="link-box-logo" style="background-image: url('https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png');"></span>
+                    <span>Chat GPT</span>
+                </a>
                 <a class="link-box link-flex" href="http://physics-astronomy.jhu.edu" target="_blank"><span>jhu</span></a>
-                <a class="link-box link-fixed" href="http://www.stsci.edu" target="_blank"><span>stsci</span></a>
+
             </div>
             <div class="row-container">
-                <a class="link-box link-fixed" href="https://github.com/LiYunyang" target="_blank"><span>github</span></a>
-                <a class="link-box link-flex" href="http://matplotlib.org/index.html" target="_blank"><span>matplotlib</span></a>
+                <a class="link-box link-fixed" href="https://act.princeton.edu/"target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://act.princeton.edu/profiles/ps/themes/ps_base/images/pu-shield.svg');"></span>
+                    <span>ACT</span>
+                </a>
+                <a class="link-box link-flex"href="https://cmb-s4.org/"target="_blank"><span>CMB-S4</span></a>
+                <a class="link-box link-fixed" href="https://www.darkenergysurvey.org/"target="_blank">
+                    <span class="link-box-logo" style="background-image: url('https://www.darkenergysurvey.org/wp-content/uploads/2020/10/desfavicon.png');"></span>
+                    <span>DES</span>
+                </a>
+                <a class="link-box link-flex" href="https://www.annualreviews.org/loi/astro"target="_blank"><span>ara&a</span></a>
+                <a class="link-box link-fixed" href="https://pole.uchicago.edu/public/Home.html"target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://pole.uchicago.edu/public/8d32003ce26bb7ea3a1a72e54a978b6c.jpg');"></span>
+                    <span>SPT</span>
+                </a>
+            </div>
+            <div class="row-container">
+                <a class="link-box link-fixed" href="https://github.com/LiYunyang" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg');"></span>
+                    <span>github</span>
+                </a>
+                <a class="link-box link-flex" href="http://matplotlib.org/index.html" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://matplotlib.org/_static/images/documentation.svg');"></span>
+                    <span>matplotlib</span>
+                </a>
                 <a class="link-box link-fixed" href="https://heasarc.gsfc.nasa.gov" target="_blank"><span>heasarc</span></a>
                 <a class="link-box link-fixed" href="http://www.stsci.edu/institute/smo/events/colloquia" target="_blank"><span>colloquia</span></a>
             </div>
@@ -141,11 +216,16 @@
                 <a class="link-box link_fixed" href="http://cade.irap.omp.eu/dokuwiki/doku.php?id=start" target="_blank"><span>cade</span></a>
             </div>
             <div class="row-container">
-                <a class="link-box link-fixed" href="https://www.ptable.com/#Property/State" target="_blank"><span>ptable</span></a>
+<!--                <a class="link-box link-fixed" href="https://www.ptable.com/#Property/State" target="_blank"><span>ptable</span></a>-->
+                <a class="link-box link-fixed" href="http://simbad.u-strasbg.fr/simbad/" target="_blank"><span>simbad</span></a>
                 <a class="link-box link-fixed" href="https://physics.nist.gov/PhysRefData/ASD/lines_form.html" target="_blank"><span>nist</span></a>
                 <a class="link-box link-fixed" href="http://www.atomdb.org/Webguide/webguide.php" target="_blank"><span>atomdb</span></a>
                 <a class="link-box link-fixed" href="https://apod.nasa.gov/apod/astropix.html" target="_blank"><span>apod</span></a>
-                <a class="link-box link-flex" href="https://www.sdss.org/" target="_blank"><span>sdss</span></a>
+                <a class="link-box link-flex" href="https://www.sdss.org/" target="_blank">
+                    <span class="link-box-logo" style="background-image:
+                    url('https://www.sdss.org/wp-content/uploads/2022/04/cropped-cropped-site_icon_SDSSV-32x32.png');"></span>
+                    <span>sdss</span>
+                </a>
             </div>
         </div>
 
