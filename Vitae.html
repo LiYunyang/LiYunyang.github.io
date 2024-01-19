@@ -273,59 +273,65 @@
 </body>
 
 <script>
-    function getLastModifiedTime(url, callback) {
-  // Create a HEAD request to get the headers
-  fetch(url, { method: 'HEAD' })
-    .then(response => {
-      // Check if the request was successful
-      if (response.ok) {
-        // Retrieve the Last-Modified header
-        const lastModifiedHeader = response.headers.get('Last-Modified');
 
-        // Parse the Last-Modified date
-        const lastModifiedDate = new Date(lastModifiedHeader);
+    const username = 'LiYunyang';
+    const repo = 'LiYunyang.github.io';
+    const filePath = 'doc/cv_YL.pdf';
+    const nekotsscca = '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'
 
-        // Call the callback with the last modified date
-        callback(lastModifiedDate);
-      } else {
-        // Call the callback with null if there was an issue
-        callback(null);
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching headers:', error);
-      // Call the callback with null in case of an error
-      callback(null);
-    });
-}
+    function getLastModifiedTime(apiUrl, callback) {
+        fetch(apiUrl, {
+            headers: {Authorization: `Bearer ${nekotsscca}`},
+        })
+        .then((response) => {
+            if (response.status === 404) {
+                throw new Error('File not found in the repository.');
+            }
+            return response.json();
+        })
+        .then((commits) => {
+            if (commits.length > 0) {
+                const lastCommit = commits[0];
+                const lastModifiedTime = new Date(lastCommit.commit.author.date);
+                callback(lastModifiedTime);
+            } else {
+                callback(null);
+            }
+        })
+            .catch((error) => {
+                console.error('Error fetching commit information:', error);
+                callback(null);
+            });
+    }
+
 
     // Example usage
-    const pdfUrl = 'doc/cv_YL.pdf';
+    const pdfUrl = `https://api.github.com/repos/${username}/${repo}/commits?path=${filePath}`;
     getLastModifiedTime(pdfUrl, lastModifiedDate => {
 
-  const badgeImage = document.getElementById('badgeImage');
+    const badgeImage = document.getElementById('badgeImage');
 
-  if (lastModifiedDate) {
-    // Format the date as "Month abbreviation YYYY"
-    const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    if (lastModifiedDate) {
+        // Format the date as "Month abbreviation YYYY"
+        const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
-    // Get the current month and year
-    const currentMonth = (new Date()).getMonth();
-    const currentYear = (new Date()).getFullYear();
+        // Get the current month and year
+        const currentMonth = (new Date()).getMonth();
+        const currentYear = (new Date()).getFullYear();
 
-    // Compare with the current month and year
-    const isCurrentMonth = lastModifiedDate.getMonth() === currentMonth && lastModifiedDate.getFullYear() === currentYear;
+        // Compare with the current month and year
+        const isCurrentMonth = lastModifiedDate.getMonth() === currentMonth && lastModifiedDate.getFullYear() === currentYear;
 
-    // Generate the URL for the badge image
-    const badgeColor = isCurrentMonth ? 'green' : 'red';
-    const badgeUrl = `https://img.shields.io/badge/PDF-${formattedDate}-${badgeColor}.svg`;
+        // Generate the URL for the badge image
+        const badgeColor = isCurrentMonth ? 'green' : 'red';
+        const badgeUrl = `https://img.shields.io/badge/PDF-${formattedDate}-${badgeColor}.svg`;
 
-    // Set the src attribute of the image
-    badgeImage.src = badgeUrl;
-  } else {
-    lastModifiedTimeElement.textContent = 'Unable to retrieve the Last Modified Time.';
-  }
-});
+        // Set the src attribute of the image
+        badgeImage.src = badgeUrl;
+    } else {
+        lastModifiedTimeElement.textContent = 'Unable to retrieve the Last Modified Time.';
+    }
+    });
 
     function createBadge() {
         var badge = document.createElement('span');
