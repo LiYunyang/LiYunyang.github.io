@@ -1,14 +1,15 @@
 let datestatus = null;
 let arxiv=null;
 let arxiv_kind = Array('CO', 'HE', 'GA', 'IM', 'SR', 'EP');
-let keywords = Array('hot gas', 'hot halo', 'missing baryon', 'neutron star', 'pulsar', 'distance ladder',
-    'gravitational wave', 'fast radio burst', 'magnetar', 'compact object', 'cosmic microwave background',
+let keywords = Array('missing baryon', 'neutron star', 'pulsar', 'distance ladder',
+    'gravitational wave', 'fast radio burst', 'compact object', 'cosmic microwave background',
     'Hubble Constant', "Hubble Tension", 'cosmology', 'B-mode', 'E-mode', 'polarization', 'inflation', "weak lensing",
-    "Sunyaev-Zel'dovich", 'Sunyaev-Zeldovich', "Sunyaev Zel'dovich", "concordance", "neutrino",
-    "baryon acoustic oscillations", "BAO", '21 cm', '21-cm', 'dark energy survey', 'dark energy', 'dark matter',
-    'primordial', 'first star', 'anomalous microwave emission',  'Planck',
+    "Sunyaev-Zel'dovich", 'Sunyaev-Zeldovich', "Sunyaev Zel'dovich", "concordance",
+    "baryon acoustic oscillations", "BAO", '21 cm', '21-cm',  'dark energy', 'dark matter',
+    'anomalous microwave emission',  'Planck', "map-making",
 );
-let keywords_case = Array('CLASS', 'LIGO', 'WMAP', 'ACT', 'SPT', 'BICEP','AME',  "CMB", "SZ", );
+let keywords_case = Array('CLASS', 'LIGO', 'WMAP', 'ACT', 'SPT', 'BICEP','AME',  "CMB", "SZ",
+    "Simons Observatory", "S4", "CMB-S4", );
 
 window.onpageshow = function(){
     $("#loading").fadeIn(function () {
