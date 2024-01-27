@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="font/fontawesome-all.css">
     <link rel="stylesheet" href="font/css/academicons.css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js-yaml.min.js"></script>
     <script src="js/all.js" defer></script>
     <title>Yunyang Li</title>
 </head>
@@ -315,10 +316,11 @@
         }
     }
     function changePicFunction() {
-        let image_title = get_image_title()
-        document.body.style.backgroundImage = image_title[0]
-        document.getElementById("title-box").title = image_title[1]
-        document.getElementById("header-title-frame").title = image_title[2]
+        get_image_title(image_title => {
+            document.body.style.backgroundImage = image_title[0]
+            document.getElementById("title-box").title = image_title[1]
+            document.getElementById("header-title-frame").title = image_title[2]
+        })
     }
 </script>
 </html>

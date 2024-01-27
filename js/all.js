@@ -1,72 +1,34 @@
-function get_image_title(){
-    let rdm = Math.floor(Math.random()*10) + 1;
-    let image;
-    let title_a;
-    let title_b;
-    switch (rdm){
-        case 1:
-            image = "url('images/cover/jupiter.jpg')";
-            title_a = 'Credit: NASA-Juno mission.';
-            // title_b = 'See Jupiter’s southern hemisphere in beautiful detail in this new image taken by NASA’s Juno spacecraft. The color-enhanced view captures one of the white ovals in the “String of Pearls,” one of eight massive rotating storms at 40 degrees south latitude on the gas giant planet. The image was taken on Oct. 24, 2017 at 11:11 a.m. PDT (2:11 p.m. EDT), as Juno performed its ninth close flyby of Jupiter. At the time the image was taken, the spacecraft was 20,577 miles (33,115 kilometers) from the tops of the clouds of the planet at a latitude of minus 52.96 degrees. The spatial scale in this image is 13.86 miles/pixel (22.3 kilometers/pixel).';
-            title_b = '';
-            break;
-        case 2:
-            image = "url('images/cover/PerX.jpg')";
-            title_a = 'Credit: NASA-APOD. The Perseus Cluster Waves.';
-            // title_b =  'The cosmic swirl and slosh of giant waves in an enormous reservoir of glowing hot gas are traced in this enhanced X-ray image from the Chandra Observatory. The frame spans over 1 million light-years across the center of the nearby Perseus Galaxy Cluster, some 240 million light-years distant. Like other clusters of galaxies, most of the observable mass in the Perseus cluster is in the form of the cluster-filling gas. With temperatures in the tens of millions of degrees, the gas glows brightly in X-rays. Computer simulations can reproduce details of the structures sloshing through the Perseus cluster’s X-ray hot gas, including the remarkable concave bay seen below and left of center. About 200,000 light-years across, twice the size of the Milky Way, the bay’s formation indicates that Perseus itself was likely grazed by a smaller galaxy cluster billions of years ago.';
-            title_b = '';
-            break;
-        case 3:
-            image = "url('images/cover/M20M21.jpg')";
-            title_a = 'Credit: NASA-APOD. Composite Messier 20 and 21.';
-            // title_b = 'The beautiful Trifid Nebula, also known as Messier 20, lies about 5,000 light-years away, a colorful study in cosmic contrasts. It shares this nearly 1 degree wide field with open star cluster Messier 21 (top left). Trisected by dust lanes the Trifid itself is about 40 light-years across and a mere 300,000 years old. That makes it one of the youngest star forming regions in our sky, with newborn and embryonic stars embedded in its natal dust and gas clouds. Estimates of the distance to open star cluster M21 are similar to M20’s, but though they share this gorgeous telescopic skyscape there is no apparent connection between the two. M21’s stars are much older, about 8 million years old. M20 and M21 are easy to find with even a small telescope in the nebula rich constellation Sagittarius. In fact, this well-composed scene is a composite from two different telescopes. Using narrowband data it blends a high resolution image of M20 with a wider field image extending to M21.';
-            title_b = '';
-            break;
-        case 4:
-            image = "url('images/cover/DarkMatter.jpg')";
-            title_a = 'Credit: NASA-APOD. Dark Matter in a Simulated Universe.';
-            // title_b = ' Is our universe haunted? It might look that way on this dark matter map. The gravity of unseen dark matter is the leading explanation for why galaxies rotate so fast, why galaxies orbit clusters so fast, why gravitational lenses so strongly deflect light, and why visible matter is distributed as it is both in the local universe and on the cosmic microwave background. The featured image from the American Museum of Natural Historys Hay- den Planetarium Space Show Dark Universe highlights one example of how pervasive dark matter might haunt our universe. In this frame from a detailed computer simulation, complex filaments of dark matter, shown in black, are strewn about the universe like spi- der webs, while the relatively rare clumps of familiar baryonic matter are colored orange. These simulations are good statistical matches to astronomical observations. In what is perhaps a scarier turn of events, dark matter – although quite strange and in an unknown form – is no longer thought to be the strangest source of gravity in the universe. That honor now falls to dark energy, a more uniform source of repulsive gravity that seems to now dominate the expansion of the entire universe.';
-            title_b = '';
-            break;
-        case 5:
-            image = "url('images/cover/pluto.jpg')";
-            title_a = 'Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute. Stereo Pluto.';
-            // title_b = 'Four images from New Horizons’ Long Range Reconnaissance Imager (LORRI) were combined with color data from the Ralph instrument to create this global view of Pluto. (The lower right edge of Pluto in this view currently lacks high-resolution color coverage.) The images, taken when the spacecraft was 280,000 miles (450,000 kilometers) away, show features as small as 1.4 miles (2.2 kilometers), twice the resolution of the single-image view taken on July 13. ';
-            title_b = '';
-            break;
-        case 6:
-            image = "url('images/cover/jupiter_art.jpg')";
-            title_a = 'Credit: NASA-Juno/Rick Lundh. ';
-            // title_b = 'Citizen scientist Rick Lundh created this abstract Jovian artwork using data from the JunoCam imager on NASA’s Juno spacecraft.';
-            title_b = '';
-            break;
-        case 7:
-            image = "url('images/cover/CLASS_telescope.jpg')";
-            title_a = 'Credit: Matthew Petroff (JHU/CLASS Collaboration)';
-            title_b = 'The first light of the Cosmology Large Angular Scale Surveyor (CLASS) telescope on site the Andes Mountains of northern Chile';
-            break;
-        case 8:
-            image = "url('images/cover/LunarEclipse.jpg')";
-            title_a = '';
-            title_b = 'The Lunar eclipse on January 20, 2019. Photographed from the roof top of my apartment in Baltimore.';
-            // title_b = '';
-            break;
-        case 9:
-            image = "url('images/cover/HubbleLegacyField.jpg')";
-            title_a = 'Credit: NASA, ESA, G. Illingworth and D. Magee (University of California, Santa Cruz), K. Whitaker (University of Connecticut), R. Bouwens (Leiden University), P. Oesch (University of Geneva,) and the Hubble Legacy Field team. ';
-            // title_b = '(Part of) the Hubble Legacy Field: This Hubble Space Telescope image represents the largest, most comprehensive "history book" of galaxies in the universe. The image, a combination of nearly 7,500 separate Hubble exposures, represents 16 years\' worth of observations. The ambitious endeavor, called the Hubble Legacy Field, includes several Hubble deep-field surveys, including the eXtreme Deep Field (XDF), the deepest view of the universe. The wavelength range stretches from ultraviolet to near-infrared light, capturing all the features of galaxy assembly over time. The image mosaic presents a wide portrait of the distant universe and contains roughly 265,000 galaxies. They stretch back through 13.3 billion years of time to just 500 million years after the universe\'s birth in the big bang. The tiny, faint, most distant galaxies in the image are similar to the seedling villages from which today\'s great galaxy star-cities grew. The faintest and farthest galaxies are just one ten-billionth the brightness of what the human eye can see. The wider view contains about 30 times as many galaxies as in the Hubble Ultra Deep Field, taken in 2004. The new portrait, a mosaic of multiple snapshots, covers almost the width of the full Moon. Lying in this region is the XDF, which penetrated deeper into space than this legacy field view. However, the XDF field covers less than one-tenth of the full Moon\'s diameter.';
-            title_b = '';
-            break;
-        case 10:
-            image = "url('images/cover/CrabNebula.jpg')";
-            title_a = 'Credit: NASA, ESA, G. Dubner (IAFE, CONICET-University of Buenos Aires) et al.; A. Loll et al.; T. Temim et al.; F. Seward et al.; VLA/NRAO/AUI/NSF; Chandra/CXC; Spitzer/JPL-Caltech; XMM-Newton/ESA; and Hubble/STScI. ';
-            // title_b = 'Crab Nebula: From left to right are the multiwavelength observations of the Crab Nebula in radio (VLA), infrared (Spitzer), optical (Hubble), ultraviolet (XMM-Newton) and X-ray (Chandra)';
-            title_b = '';
-            break;
-
-    }
-    return [image, title_a, title_b + '\n' + title_a]
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+function get_image_title(callback) {
+    // Assuming 'data.yaml' is in the same directory as your HTML file
+    fetch('images/cover/info.yaml')
+        .then(response => response.text())
+        .then(data => {
+            const parsedData = jsyaml.load(data);
+
+            if (!Array.isArray(parsedData) || parsedData.length === 0) {
+                console.error('Invalid YAML format or empty array.');
+                callback(['', '', '']);
+                return;
+            }
+
+            const rdm = getRandomInt(0, parsedData.length - 1);
+            const image = `url('${parsedData[rdm].image}')`;
+            const title_a = parsedData[rdm].title_a;
+            const title_b = parsedData[rdm].title_b || '';
+
+            callback([image, title_a, title_b + '\n' + title_a]);
+        })
+        .catch(error => {
+            console.error('Error reading YAML file:', error.message);
+            callback(['', '', '']);
+        });
+}
+
 
 function get_header(html){
     let header = document.createElement('div')
@@ -122,11 +84,11 @@ function get_header(html){
     header.appendChild(header_bars)
     let body = $('body')[0]
     body.insertBefore(header, body.childNodes[0])
-
-    let image_title = get_image_title()
     header.id = 'header'
-    document.body.style.backgroundImage = image_title[0]
-    header_frame.title = image_title[1]
+    get_image_title(image_title => {
+        document.body.style.backgroundImage = image_title[0]
+        header_frame.title = image_title[1]
+    })
 
 }
 
@@ -247,7 +209,6 @@ function insert_stats_tracker(){
 
 window.onload = function () {
     let html = window.location.pathname.split("/").pop().split('.')[0]
-    console.log(html)
     if(Array('Vitae', 'Research', 'Publications', 'Astrotoday', 'Links').includes(html)){get_header(html)}
     get_footer();
     insert_stats_tracker();
