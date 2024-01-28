@@ -1,5 +1,5 @@
 ---
-firstauthor:
+first-author:
     -   title: "CLASS Observations of Atmospheric Cloud Polarization at Millimeter Wavelengths"
         authors: <b>Yunyang Li</b> & CLASS Collaboration
         year: 2023
@@ -30,7 +30,7 @@ firstauthor:
         journal_code: ApJ 849 105
         journal_ref: https://iopscience.iop.org/article/10.3847/1538-4357/aa92c6
         local_ref: publications/Li_2017_ApJ_849_105.pdf
-coauthor:
+contrib-author:
 #    -   title: ""
 #        authors:
 #        year:
