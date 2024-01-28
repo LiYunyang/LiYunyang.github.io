@@ -59,7 +59,7 @@ function get_header(html){
         case 'Astrotoday':
             title_box.innerHTML=`
                 <h1 >ASTRO TODAY</h1>
-                
+                <p>Latest listings on astro-ph</p>
             `
             break;
         case 'Links':
@@ -207,10 +207,13 @@ function insert_stats_tracker(){
     document.body.appendChild(noscriptElement);
 }
 
-window.onload = function () {
+
+
+document.addEventListener('DOMContentLoaded', function() {
     let html = window.location.pathname.split("/").pop().split('.')[0]
-    if(Array('Vitae', 'Research', 'Publications', 'Astrotoday', 'Links').includes(html)){get_header(html)}
+    if(Array('Vitae', 'Research', 'Publications', 'Astrotoday', 'Links').includes(html)){
+        get_header(html)
+    }
     get_footer();
     insert_stats_tracker();
-};
-
+});

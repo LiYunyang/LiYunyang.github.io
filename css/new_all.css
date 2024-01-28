@@ -126,15 +126,21 @@ button > i.fa{background: transparent;}
     width: 100%;
     bottom: 0;
     position: absolute;
-    padding: 0.2em;
+    padding-bottom: 1em;
+    /*padding: 0.2em;*/
 }
 #title-box h1{
     color: white;
     font-size: var(--font-size-head);
+    height: 1em;
+    line-height: 1em;
 }
 #title-box > p{
     color: dodgerblue;
     font-size: var(--font-size-head-sub);
+    height: 1em;
+    line-height: 1em;
+    margin-top: 0.5em;
 }
 
 
