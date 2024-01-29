@@ -58,7 +58,7 @@ function get_header(html){
             break;
         case 'Astrotoday':
             title_box.innerHTML=`
-                <h1 >ASTRO TODAY</h1>
+                <h1 >ASTROTODAY</h1>
                 <p>Latest listings on astro-ph</p>
             `
             break;

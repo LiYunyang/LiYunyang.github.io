@@ -3,16 +3,16 @@
   title_b: ""
 
 - image: "images/cover/PerX.jpg"
-  title_a: "Credit: NASA-APOD. The Perseus Cluster Waves."
-  title_b: ""
+  title_a: "Credit: Stephen Walker, et al."
+  title_b: "X-ray image of the hot gas in the Perseus galaxy cluster made from 16 days of Chandra observations. The image is filtered in a way that brightened the contrast of edges in order to make subtle details more obvious."
 
 - image: "images/cover/M20M21.jpg"
   title_a: "Credit: NASA-APOD. Composite Messier 20 and 21."
   title_b: ""
 
 - image: "images/cover/DarkMatter.jpg"
-  title_a: "Credit: NASA-APOD. Dark Matter in a Simulated Universe."
-  title_b: ""
+  title_a: "Credit: Tom Abel & Ralf Kaehler."
+  title_b: "Dark Matter in a Simulated Universe."
 
 - image: "images/cover/pluto.jpg"
   title_a: "Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute. Stereo Pluto."
@@ -20,10 +20,10 @@
 
 - image: "images/cover/jupiter_art.jpg"
   title_a: "Credit: NASA-Juno/Rick Lundh."
-  title_b: ""
+  title_b: "Citizen scientist Rick Lundh created this abstract Jovian artwork using data from the JunoCam imager on NASA’s Juno spacecraft."
 
 - image: "images/cover/CLASS_telescope.jpg"
-  title_a: "Credit: Matthew Petroff (JHU/CLASS Collaboration)"
+  title_a: "Credit: Matthew Petroff"
   title_b: "The first light of the Cosmology Large Angular Scale Surveyor (CLASS) telescope on site the Andes Mountains of northern Chile"
 
 #- image: "images/cover/LunarEclipse.jpg"
@@ -31,12 +31,9 @@
 #  title_b: "The Lunar eclipse on January 20, 2019. Photographed from the roof top of my apartment in Baltimore."
 
 - image: "images/cover/HubbleLegacyField.jpg"
-  title_a: "Credit: NASA, ESA, G. Illingworth and D. Magee (University of California, Santa Cruz), K. Whitaker (University of Connecticut), R. Bouwens (Leiden University), P. Oesch (University of Geneva,) and the Hubble Legacy Field team."
-  title_b: "(Part of) the Hubble Legacy Field: This Hubble Space Telescope image represents the largest, most comprehensive 'history book' of galaxies in the universe. The image, a combination of nearly 7,500 separate Hubble exposures, represents 16 years' worth of observations. The ambitious endeavor, called the Hubble Legacy Field, includes several Hubble deep-field surveys, including the eXtreme Deep Field (XDF), the deepest view of the universe. The wavelength range stretches from ultraviolet to near-infrared light, capturing all the features of galaxy assembly over time. The image mosaic presents a wide portrait of the distant universe and contains roughly 265,000 galaxies. They stretch back through 13.3 billion years of time to just 500 million years after the universe's birth in the big bang. The tiny, faint, most distant galaxies in the image are similar to the seedling villages from which today's great galaxy star-cities grew. The faintest and farthest galaxies are just one ten-billionth the brightness of what the human eye can see. The wider view contains about 30 times as many galaxies as in the Hubble Ultra Deep Field, taken in 2004. The new portrait, a mosaic of multiple snapshots, covers almost the width of the full Moon. Lying in this region is the XDF, which penetrated deeper into space than this legacy field view. However, the XDF field covers less than one-tenth of the full Moon's diameter."
+  title_a: "Credit: NASA, ESA, and the Hubble Legacy Field team."
+  title_b: "(Part of) the Hubble Legacy Field: This Hubble Space Telescope image represents the largest, most comprehensive 'history book' of galaxies in the universe. The image, a combination of nearly 7,500 separate Hubble exposures, represents 16 years' worth of observations."
 
 - image: "images/cover/CSS.jpeg"
   title_a: "Credit: China Manned Space Agency"
   title_b: "Panoramic images of the China Space Station from Shenzhou-16 crew"
-#- image: "images/cover/CrabNebula.jpg"
-#  title_a: "Credit: NASA, ESA, G. Dubner (IAFE, CONICET-University of Buenos Aires) et al.; A. Loll et al.; T. Temim et al.; F. Seward et al.; VLA/NRAO/AUI/NSF; Chandra/CXC; Spitzer/JPL-Caltech; XMM-Newton/ESA; and Hubble/STScI."
-#  title_b: "Crab Nebula: From left to right are the multiwavelength observations of the Crab Nebula in radio (VLA), infrared (Spitzer), optical (Hubble), ultraviolet (XMM-Newton) and X-ray (Chandra)"
