@@ -1,8 +1,8 @@
 let pub_json = null;
 
 $.ajax({
-    url: 'doc/pub.yaml',
-    // url: 'scripts/pub.yaml',
+    // url: 'doc/pub.yaml',
+    url: 'scripts/pub.yaml',
     async: false,
     dataType: 'text',
     success: function (yaml) {
@@ -16,11 +16,11 @@ $.ajax({
 
 
 window.onpageshow = function () {
-    renderPubList(pub_json['first-author'], $('.first-author')[0]);
-    renderPubList(pub_json['contrib-author'], $('.co-author')[0]);
+    // renderPubList(pub_json['first-author'], $('.first-author')[0]);
+    // renderPubList(pub_json['contrib-author'], $('.co-author')[0]);
 
-    // renderPubListNew(pub_json['first-author'], $('.first-author')[0]);
-    // renderPubListNew(pub_json['contrib-author'].concat(pub_json['advisory-author']), $('.co-author')[0]);
+    renderPubListNew(pub_json['first-author'], $('.first-author')[0]);
+    renderPubListNew(pub_json['contrib-author'].concat(pub_json['advisory-author']), $('.co-author')[0]);
 };
 
 function renderPubList(json_item, block){
