@@ -263,7 +263,7 @@ button > i.fa{background: transparent;}
     display: flex;
     justify-content: center;
 }
-#signature span{text-transform: capitalize}
+/*#signature span{text-transform: capitalize}*/
 #signature>span:first-child{
     text-align: right;
     width: 20em;

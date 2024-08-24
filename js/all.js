@@ -41,19 +41,17 @@ function get_header(html){
         case 'Vitae':
             title_box.innerHTML=`
                 <h1>VITAE</h1>
-                <p style="visibility: hidden"> My name is Yunyang. I am an astrophysicist.</p>
             `
             break;
         case 'Research':
             title_box.innerHTML=`
                 <h1>RESEARCH</h1>
-                <p style="visibility: hidden;">Astrophysicist, like a normal physicist, except much cooler.</p>
             `
             break;
         case 'Publications':
             title_box.innerHTML=`
                 <h1>PUBLICATIONS</h1>
-                <p style="visibility: hidden">Department of Physics and Astronomy, Johns Hopkins University</p>
+                
             `
             break;
         case 'Astrotoday':
@@ -65,7 +63,6 @@ function get_header(html){
         case 'Links':
             title_box.innerHTML=`
                 <h1>LINKS</h1>
-                <p style="visibility: hidden">Department of Physics and Astronomy, Johns Hopkins University</p>
             `
             break;
     }
@@ -160,7 +157,7 @@ function get_footer(){
     <div id="signature">
         <span>YUNYANG LI</span>
         <span>|</span>
-        <span>JOHNS HOPKINS UNIVERSITY</span>
+        <span>University of Chicago</span>
     </div>
     <div id="last-edit"><span>Last edit: ${last_modified}</span></div>
     `

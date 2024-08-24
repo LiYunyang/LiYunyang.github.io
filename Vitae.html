@@ -274,7 +274,8 @@
                 <div class="cv-item">
                     <div class="cv-item-inline">
                         <span class="cv-item-head"><a class="hover" href="Publications.html">List of publications</a></span>
-                        <span class="cv-item-body">h-index: 8; citation: 300</span>
+<!--                        <span class="cv-item-body">h-index: -; citation: -</span>-->
+                        <span class="cv-item-body" id="h-index">h-index: -, citation: -</span>
                     </div>
                 </div>
             </div>
@@ -361,6 +362,36 @@
         talkInv.insertBefore(createBadge(), firstNonTextChild);
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+            // Specify the relative path to the .tex file
+            const texFilePath = 'scripts/output.tex'; // Replace with your actual relative path
+
+            // Fetch the content of the .tex file
+            fetch(texFilePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(content => {
+                    const regex = /h-index:\s*(\d+),\s*citations:\s*(\d+)/;
+                    const match = content.match(regex);
+
+                    if (match) {
+                        const hIndex = match[1];
+                        const citations = match[2];
+
+                        // Update the HTML with extracted values
+                        document.querySelector('#h-index').innerText = `h-index: ${hIndex}, citation: ${citations}`;
+                    } else {
+                        alert('No metrics found in the file.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching file:', error);
+                });
+        });
 
 </script>
 
