@@ -107,6 +107,7 @@ body{
     min-height: calc(100vh - 56.25vw - 76px - 100px - 18px + 5px);
 }
 
+
 /*for large desktop user*/
 @media only screen and (min-width: 800px) and (min-device-aspect-ratio: 1/1){
     #Home{

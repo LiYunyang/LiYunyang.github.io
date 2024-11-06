@@ -77,7 +77,8 @@
     #liame{
         overflow: hidden;
         user-select: all;
-        /*color: transparent;*/
+        direction: rtl;
+        unicode-bidi: bidi-override;
     }
     #portrait {
         width: 100%;
@@ -292,7 +293,7 @@
                     I actively work with experiments such as <a class="hover" href="Research.html#research-class">CLASS</a> and
                     the <a class="hover" href="https://pole.uchicago.edu/public/Home.html">South Pole Telescope</a>.
                     <br><br>
-                    Currently, I am a KICP fellow at the <a class="hover" href="https://kavlicosmo.uchicago.edu/">University of Chicago </a>.
+                    Currently, I work at the <a class="hover" href="https://kavlicosmo.uchicago.edu/">University of Chicago </a> as a KICP fellow.
                     Prior to this, I earned my Ph.D. from <a class="hover" href="https://physics-astronomy.jhu.edu" target="_blank">Johns Hopkins University</a> and my Bachelor's Degree in Physics from <a class="hover" href="https://english.phy.pku.edu.cn/" target="_blank">Peking University</a>.
                     <br><br>
                     Please feel free to get in touch!
@@ -306,7 +307,7 @@
         changePicFunction()
         stretchCoverImage()
         let add = 'ude.ogacihcu_AT_lgnaynuy'.split('').reverse().join('')
-        document.getElementById("liame").innerText = add.replace('_TA_', '@')
+        document.getElementById("liame").innerText = add.replace('_TA_', '@').split('').reverse().join('')
     }
     window.onresize=stretchCoverImage
     function stretchCoverImage(){
