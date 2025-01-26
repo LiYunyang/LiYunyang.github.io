@@ -8,7 +8,7 @@ from datetime import datetime
 
 ads_api_key = 'KGN8XH9gR0yBKrqq0ErccGMnYomNlszLoFAAy6kn'
 library_id = 'oQSmjgZfSFiKlqPXclOhUg'
-ads_api_url = f'https://api.adsabs.harvard.edu/v1/biblib/libraries/{library_id}'
+ads_api_url = f'https://api.adsabs.harvard.edu/v1/biblib/libraries/{library_id}?rows=100'
 headers = {'Authorization': f'Bearer {ads_api_key}'}
 
 my_name = ['Li, Yunyang', 'Li, Y.', 'Li, Y.-Y.', 'Li, Yun-Yang']
@@ -114,6 +114,8 @@ def update_pub_list():
     cur_list = open_current_list()
     new_list = {k: [] for k in cur_list.keys()}
     for entry in raw_list:
+        if entry.get('journal', None) == 'SPIE':
+            entry['issue'] = entry['issue'].split(',')[1].strip(' ')
         matched=False
         for k, v in cur_list.items():
             for _v in v:
