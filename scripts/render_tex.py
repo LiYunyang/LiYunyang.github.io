@@ -64,6 +64,5 @@ with open('pub.yaml', 'r') as f:
 #Output or save the LaTeX code to a file
 with open("output.tex", "w") as f:
     f.write(render_citation(pub_dict))
-    f.write(render_section("AS FIRST AUTHOR", pub_dict['first-author']))
+    f.write(render_section("AS MAIN AUTHOR", pub_dict['main-author']))
     f.write(render_section("AS CONTRIBUTING COAUTHOR", pub_dict['contrib-author']))
-    f.write(render_section("REVIEW/ADVISORY CONTRIBUTION", pub_dict['advisory-author']))

@@ -19,8 +19,8 @@ window.onpageshow = function () {
     // renderPubList(pub_json['first-author'], $('.first-author')[0]);
     // renderPubList(pub_json['contrib-author'], $('.co-author')[0]);
 
-    renderPubListNew(pub_json['first-author'], $('.first-author')[0]);
-    renderPubListNew(pub_json['contrib-author'].concat(pub_json['advisory-author']), $('.co-author')[0]);
+    renderPubListNew(pub_json['main-author'], $('.first-author')[0]);
+    renderPubListNew(pub_json['contrib-author'], $('.co-author')[0]);
 };
 
 function renderPubList(json_item, block){

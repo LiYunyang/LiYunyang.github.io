@@ -289,7 +289,7 @@
     const username = 'LiYunyang';
     const repo = 'LiYunyang.github.io';
     const filePath = 'doc/cv_YL.pdf';
-    const nekotsscca = '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'
+    const nekotsscca = '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'
 
     function getLastModifiedTime(apiUrl, callback) {
         fetch(apiUrl, {
@@ -304,6 +304,7 @@
         .then((commits) => {
             if (commits.length > 0) {
                 const lastCommit = commits[0];
+                console.log(lastCommit);
                 const lastModifiedTime = new Date(lastCommit.commit.author.date);
                 callback(lastModifiedTime);
             } else {
@@ -354,6 +355,7 @@
         badge.textContent = 'invited'; // Set the badge text here
         return badge;
     }
+    
     document.querySelectorAll('.cv-talk-inv').forEach(function(talkInv) {
     // Find the first non-text child (like an <a> tag)
         var firstNonTextChild = Array.from(talkInv.childNodes).find(node => node.nodeType !== Node.TEXT_NODE);

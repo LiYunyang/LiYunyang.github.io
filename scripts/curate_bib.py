@@ -96,17 +96,18 @@ def compare_two_entry(a, b):
         return False
 
 def auto_categorize(a):
-    if a['authors'][0] == 'YL':
-        return 'first-author'
     if 'YL' not in a['authors']:
         return "unknown"
     else:
         index = a['authors'].index('YL')
-        for _ in a['authors'][index+1:]:
-            if _.split(',')[0] < 'Li':
-                return "contrib-author"
+        if index < 2:
+            return "main-author"
         else:
-            return "advisory-author"
+          for _ in a['authors'][index+1:]:
+              if _.split(',')[0] < 'Li':
+                  return "main-author"
+          else:
+              return "contrib-author"
 
 
 def update_pub_list():
