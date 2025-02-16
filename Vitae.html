@@ -289,11 +289,13 @@
     const username = 'LiYunyang';
     const repo = 'LiYunyang.github.io';
     const filePath = 'doc/cv_YL.pdf';
-    const nekotsscca = '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'
 
+
+    const token = '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'
+    
     function getLastModifiedTime(apiUrl, callback) {
         fetch(apiUrl, {
-            headers: {Authorization: `Bearer ${nekotsscca}`},
+            headers: {Authorization: `Bearer ${token}`},
         })
         .then((response) => {
             if (response.status === 404) {
