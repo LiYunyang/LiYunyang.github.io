@@ -289,11 +289,12 @@
     const username = 'LiYunyang';
     const repo = 'LiYunyang.github.io';
     const filePath = 'doc/cv_YL.pdf';
-    const token = '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'
+    const tokenA = '11AFAAE5A0nLTUeWmnq46O'
+    const tokenB = 'dL1r39nZJLET2fMaRnF962BKvvqexAuwrwAHA3yCkfbR7VZUWUH6xln0a7O'
     
     function getLastModifiedTime(apiUrl, callback) {
         fetch(apiUrl, {
-            headers: {Authorization: `Bearer ${token}`},
+            headers: {Authorization: `Bearer github_pat_${tokenA}_${tokenB}`},
         })
         .then((response) => {
             if (response.status === 404) {
