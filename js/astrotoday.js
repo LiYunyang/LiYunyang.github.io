@@ -46,7 +46,7 @@ function render_arxiv(arxiv) {
     let cross_links = arxiv.getElementsByTagName('dl')[1];
 
     let newdate = new Date(arxiv.getElementsByTagName('h3')[0].innerHTML.match(/for.*/g)[0].slice(4,));
-    let crsdate = new Date(arxiv.getElementsByTagName('h3')[1].innerHTML.match(/for.*/g)[0].slice(4,));
+    // let crsdate = new Date(arxiv.getElementsByTagName('h3')[1].innerHTML.match(/for.*/g)[0].slice(4,));
     let today = new Date();
     let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     let new_date = document.getElementById("replaceable_new_date");
@@ -75,7 +75,7 @@ function populateArxiv(arxiv_section, data_dl) {
     let dd = data_dl.getElementsByTagName('dd');
     let length = dd.length;
     for (let i = 0; i < length; i++){
-        let id = dt[i].getElementsByTagName('span')[0].firstChild.innerText.slice(6);
+        let id = dt[i].getElementsByTagName('a')[1].id
 
         let item_div = document.createElement('div');
         item_div.className = 'at-item';

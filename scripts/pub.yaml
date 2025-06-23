@@ -120,6 +120,17 @@ contrib-author:
         bibcode: 2024arXiv241112705N
         citation: 1
         pdf_url: https://arxiv.org/pdf/2411.12705.pdf
+    -   title: 'HoverCal + PoloCalC: precise on-flight metrology performance results over CLASS telescope'
+        authors: ["D\xFCnner, Rolando", 'Astori, Federico', 'Coppi, Gabriele', 'Eimer, Joseph', 'Errard, Josquin', "Flux\xE1, Juan", YL, 'Mezzanzanica, Noemi', 'Nati, Federico', 'Petroff, Matthew', 'Puddu, Roberto', "Rojas, Mat\xEDas", 'Zannoni, Mario']
+        year: 2024
+        journal: SPIE
+        issue: '1310217'
+        url: https://ui.adsabs.harvard.edu/abs/2024SPIE13102E..17D
+        doi: 10.1117/12.3018469
+        date: 2024/08
+        bibcode: 2024SPIE13102E..17D
+        citation: 1
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024SPIE13102E..17D/PUB_PDF
     -   title: Sensitivity-improved Polarization Maps at 40 GHz with CLASS and WMAP Data
         authors: ['Shi, Rui', CLASS Collaboration]
         year: 2024
@@ -132,17 +143,6 @@ contrib-author:
         bibcode: 2024ApJ...971...41S
         citation: 4
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJ...971...41S/PUB_PDF
-    -   title: 'HoverCal + PoloCalC: precise on-flight metrology performance results over CLASS telescope'
-        authors: ["D\xFCnner, Rolando", 'Astori, Federico', 'Coppi, Gabriele', 'Eimer, Joseph', 'Errard, Josquin', "Flux\xE1, Juan", YL, 'Mezzanzanica, Noemi', 'Nati, Federico', 'Petroff, Matthew', 'Puddu, Roberto', "Rojas, Mat\xEDas", 'Zannoni, Mario']
-        year: 2024
-        journal: SPIE
-        issue: '1310217'
-        url: https://ui.adsabs.harvard.edu/abs/2024SPIE13102E..17D
-        doi: 10.1117/12.3018469
-        date: 2024/08
-        bibcode: 2024SPIE13102E..17D
-        citation: 1
-        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024SPIE13102E..17D/PUB_PDF
     -   title: 'Cosmology Large Angular Scale Surveyor (CLASS): 90 GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance'
         authors: ['Datta, Rahul', 'Brewer, Michael K.', 'Denes Couto, Jullianna', 'Eimer, Joseph', YL, CLASS Collaboration]
         year: 2024
