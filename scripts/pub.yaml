@@ -1,16 +1,16 @@
 main-author:
-    -   title: A Measurement of the Largest-Scale CMB E-mode Polarization with CLASS
+    -   title: A Measurement of the Largest-scale CMB E-mode Polarization with CLASS
         authors: [YL, CLASS Collaboration]
         year: 2025
-        journal: arXiv
-        issue: null
-        url: https://ui.adsabs.harvard.edu/abs/2025arXiv250111904L
-        doi: 10.48550/arXiv.2501.11904
+        journal: ApJ
+        issue: 986,111
+        url: https://ui.adsabs.harvard.edu/abs/2025ApJ...986..111L
+        doi: 10.3847/1538-4357/adc723
         arxiv: '2501.11904'
-        date: 2025/01
-        bibcode: 2025arXiv250111904L
+        date: 2025/06
+        bibcode: 2025ApJ...986..111L
         citation: 4
-        pdf_url: https://arxiv.org/pdf/2501.11904.pdf
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2025ApJ...986..111L/PUB_PDF
     -   title: CLASS Angular Power Spectra and Map-component Analysis for 40 GHz Observations through 2022
         authors: ['Eimer, Joseph R.', YL, CLASS Collaboration]
         year: 2024
@@ -105,21 +105,21 @@ main-author:
         arxiv: '1710.02116'
         date: 2017/11
         bibcode: 2017ApJ...849..105L
-        citation: 38
+        citation: 39
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2017ApJ...849..105L/PUB_PDF
 contrib-author:
-    -   title: High-Efficiency and Low-Noise Detectors for the Upgraded CLASS 90 GHz Focal Plane
+    -   title: High-efficiency and Low-noise Detectors for the Upgraded CLASS 90 GHz Focal Plane
         authors: ["N\xFA\xF1ez, Carolina", CLASS Collaboration]
-        year: 2024
-        journal: arXiv
-        issue: null
-        url: https://ui.adsabs.harvard.edu/abs/2024arXiv241112705N
-        doi: 10.48550/arXiv.2411.12705
+        year: 2025
+        journal: ApJS
+        issue: 278,56
+        url: https://ui.adsabs.harvard.edu/abs/2025ApJS..278...56N
+        doi: 10.3847/1538-4365/adc602
         arxiv: '2411.12705'
-        date: 2024/11
-        bibcode: 2024arXiv241112705N
+        date: 2025/06
+        bibcode: 2025ApJS..278...56N
         citation: 1
-        pdf_url: https://arxiv.org/pdf/2411.12705.pdf
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2025ApJS..278...56N/PUB_PDF
     -   title: 'HoverCal + PoloCalC: precise on-flight metrology performance results over CLASS telescope'
         authors: ["D\xFCnner, Rolando", 'Astori, Federico', 'Coppi, Gabriele', 'Eimer, Joseph', 'Errard, Josquin', "Flux\xE1, Juan", YL, 'Mezzanzanica, Noemi', 'Nati, Federico', 'Petroff, Matthew', 'Puddu, Roberto', "Rojas, Mat\xEDas", 'Zannoni, Mario']
         year: 2024
@@ -131,6 +131,18 @@ contrib-author:
         bibcode: 2024SPIE13102E..17D
         citation: 1
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024SPIE13102E..17D/PUB_PDF
+    -   title: 'Cosmology Large Angular Scale Surveyor (CLASS): 90 GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance'
+        authors: ['Datta, Rahul', 'Brewer, Michael K.', 'Denes Couto, Jullianna', 'Eimer, Joseph', YL, CLASS Collaboration]
+        year: 2024
+        journal: ApJS
+        issue: 273,26
+        url: https://ui.adsabs.harvard.edu/abs/2024ApJS..273...26D
+        doi: 10.3847/1538-4365/ad50a0
+        arxiv: '2308.13309'
+        date: 2024/08
+        bibcode: 2024ApJS..273...26D
+        citation: 6
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJS..273...26D/PUB_PDF
     -   title: Sensitivity-improved Polarization Maps at 40 GHz with CLASS and WMAP Data
         authors: ['Shi, Rui', CLASS Collaboration]
         year: 2024
@@ -143,18 +155,6 @@ contrib-author:
         bibcode: 2024ApJ...971...41S
         citation: 4
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJ...971...41S/PUB_PDF
-    -   title: 'Cosmology Large Angular Scale Surveyor (CLASS): 90 GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance'
-        authors: ['Datta, Rahul', 'Brewer, Michael K.', 'Denes Couto, Jullianna', 'Eimer, Joseph', YL, CLASS Collaboration]
-        year: 2024
-        journal: ApJS
-        issue: 273,26
-        url: https://ui.adsabs.harvard.edu/abs/2024ApJS..273...26D
-        doi: 10.3847/1538-4365/ad50a0
-        arxiv: '2308.13309'
-        date: 2024/08
-        bibcode: 2024ApJS..273...26D
-        citation: 7
-        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJS..273...26D/PUB_PDF
     -   title: Microwave Observations of Venus with CLASS
         authors: ['Dahal, Sumit', CLASS Collaboration]
         year: 2023
@@ -189,7 +189,7 @@ contrib-author:
         arxiv: '2205.06901'
         date: 2022/10
         bibcode: 2022ApJS..262...52A
-        citation: 17
+        citation: 16
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2022ApJS..262...52A/PUB_PDF
     -   title: 'Four-year Cosmology Large Angular Scale Surveyor (CLASS) Observations: On-sky Receiver Performance at 40, 90, 150, and 220 GHz Frequency Bands'
         authors: ['Dahal, Sumit', CLASS Collaboration]
@@ -201,7 +201,7 @@ contrib-author:
         arxiv: '2107.08022'
         date: 2022/02
         bibcode: 2022ApJ...926...33D
-        citation: 36
+        citation: 35
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2022ApJ...926...33D/PUB_PDF
     -   title: 'Two Year Cosmology Large Angular Scale Surveyor (CLASS) Observations: Long Timescale Stability Achieved with a Front-end Variable-delay Polarization Modulator at 40 GHz'
         authors: ['Harrington, Kathleen', CLASS Collaboration]
@@ -215,18 +215,6 @@ contrib-author:
         bibcode: 2021ApJ...922..212H
         citation: 18
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2021ApJ...922..212H/PUB_PDF
-    -   title: The Extended Distribution of Baryons around Galaxies
-        authors: ['Bregman, Joel N.', 'Anderson, Michael E.', 'Miller, Matthew J.', 'Hodges-Kluck, Edmund', 'Dai, Xinyu', 'Li, Jiang-Tao', YL, 'Qu, Zhijie']
-        year: 2018
-        journal: ApJ
-        issue: 862,3
-        url: https://ui.adsabs.harvard.edu/abs/2018ApJ...862....3B
-        doi: 10.3847/1538-4357/aacafe
-        arxiv: '1803.08963'
-        date: 2018/07
-        bibcode: 2018ApJ...862....3B
-        citation: 130
-        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018ApJ...862....3B/PUB_PDF
     -   title: The optical/UV excess of X-ray-dim isolated neutron star II. Nonuniformity of plasma on a strangeon star surface
         authors: ['Wang, Wei-Yang', 'Feng, Yi', 'Lai, Xiao-Yu', YL, 'Lu, Ji-Guang', 'Chen, Xuelei', 'Xu, Ren-Xin']
         year: 2018
@@ -239,6 +227,18 @@ contrib-author:
         bibcode: 2018RAA....18...82W
         citation: 7
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018RAA....18...82W/PUB_PDF
+    -   title: The Extended Distribution of Baryons around Galaxies
+        authors: ['Bregman, Joel N.', 'Anderson, Michael E.', 'Miller, Matthew J.', 'Hodges-Kluck, Edmund', 'Dai, Xinyu', 'Li, Jiang-Tao', YL, 'Qu, Zhijie']
+        year: 2018
+        journal: ApJ
+        issue: 862,3
+        url: https://ui.adsabs.harvard.edu/abs/2018ApJ...862....3B
+        doi: 10.3847/1538-4357/aacafe
+        arxiv: '1803.08963'
+        date: 2018/07
+        bibcode: 2018ApJ...862....3B
+        citation: 130
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018ApJ...862....3B/PUB_PDF
     -   title: Merging strangeon stars
         authors: ['Lai, Xiao-Yu', 'Yu, Yun-Wei', 'Zhou, En-Ping', YL, 'Xu, Ren-Xin']
         year: 2018
@@ -249,6 +249,6 @@ contrib-author:
         arxiv: '1710.04964'
         date: 2018/02
         bibcode: 2018RAA....18...24L
-        citation: 44
+        citation: 45
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018RAA....18...24L/PUB_PDF
 unknown: []
