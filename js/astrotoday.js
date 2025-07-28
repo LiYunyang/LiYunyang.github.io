@@ -20,9 +20,9 @@ window.onpageshow = function(){
 function fetch_new(){
     console.log('start')
     let proxy = "https://cors-anywhere-for-yl.herokuapp.com/";
-    let url = "http://export.arxiv.org/list/astro-ph/new";
+    let url = "https://export.arxiv.org/list/astro-ph/new";
 
-    return fetch(proxy+url, )
+    return fetch(proxy+url+"?nocache=" + Date.now(), )
         .then(response => response.text())
         .then(str => new window.DOMParser().parseFromString(str, "text/html"))
         .then(data => render_arxiv(data))
