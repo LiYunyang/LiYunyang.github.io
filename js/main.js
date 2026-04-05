@@ -144,7 +144,7 @@
     const contribContainer = document.getElementById('pub-contrib-author');
     if (!mainContainer && !contribContainer) return;
 
-    fetch('../scripts/pub.yaml')
+    fetch('scripts/pub.yaml')
       .then(function (res) {
         if (!res.ok) throw new Error('Failed to fetch pub.yaml');
         return res.text();

@@ -243,6 +243,17 @@ mark {
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
+  .at-item {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .at-num {
+    width: auto;
+    text-align: left;
+    line-height: 1.2;
+  }
+
   .at-sidebar {
     width: 100%;
     height: auto;

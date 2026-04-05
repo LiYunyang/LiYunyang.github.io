@@ -17,19 +17,18 @@
     other: 'rgba(20, 20, 20, 1)'
   };
   const KEYWORDS = [
-    'missing baryon', 'neutron star', 'pulsar', 'distance ladder',
-    'gravitational wave', 'fast radio burst', 'compact object',
-    'cosmic microwave background', 'Hubble Constant', 'Hubble Tension',
+    'gravitational wave', 'fast radio burst',
+    'cosmic microwave background', 'CMB', 'delensing', 'CMB lensing' ,'Hubble Constant', 'Hubble Tension',
     'cosmology', 'B-mode', 'E-mode', 'polarization', 'inflation',
     'weak lensing', "Sunyaev-Zel'dovich", 'Sunyaev-Zeldovich',
-    "Sunyaev Zel'dovich", 'concordance', 'baryon acoustic oscillations',
+    "Sunyaev Zel'dovich", 'concordance', 'baryon acoustic oscillations', 'BAO',
     'BAO', '21 cm', '21-cm', 'dark energy', 'dark matter',
-    'anomalous microwave emission', 'Planck', 'map-making',
+    'anomalous microwave emission', 'Planck', 'map-making', 'line-intensity mapping', 'LIM',
   ];
 
   const KEYWORDS_CASE = [
-    'CLASS', 'LIGO', 'WMAP', 'ACT', 'SPT', 'BICEP', 'AME',
-    'CMB', 'SZ', 'Simons Observatory', 'S4', 'CMB-S4',
+    'CLASS', 'WMAP', 'ACT', 'SPT', 'BICEP', 'AME',
+    'CMB', 'SZ', 'Simons Observatory', 'S4', 'CMB-S4', 'SO',
   ];
 
   /* ── State ──────────────────────────────────────────────────────────────── */
