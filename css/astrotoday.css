@@ -1,0 +1,283 @@
+/* ===== JetBrains Mono (from new_all.css) ===== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+/* ===== Astro Today — topic colours ===== */
+:root {
+  --at-GA:    rgba(44, 126, 212, 1);
+  --at-SR:    rgba(255, 215, 0, 1);
+  --at-HE:    rgba(255, 69, 0, 1);
+  --at-CO:    rgba(34, 139, 34, 1);
+  --at-IM:    rgba(105, 105, 105, 1);
+  --at-EP:    rgba(139, 69, 19, 1);
+  --at-other: rgba(20, 20, 20, 1);
+}
+
+/* ===== Sidebar section label ===== */
+.sidebar-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sidebar-text-muted);
+  margin-bottom: 8px;
+}
+
+/* ===== Topic toggle buttons (vertical list) ===== */
+.at-topic-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.at-topic-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sidebar-text-muted);
+  background: transparent;
+  text-align: left;
+  transition: background 150ms ease, color 150ms ease;
+  width: 100%;
+}
+
+.at-topic-btn:hover {
+  background: var(--sidebar-hover-bg);
+  color: var(--sidebar-text);
+}
+
+.at-topic-btn.active {
+  color: #fff;
+}
+
+.at-topic-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.at-topic-count {
+  margin-left: auto;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ===== Loading ===== */
+.at-loading {
+  text-align: center;
+  padding: 48px 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ===== Paper item ===== */
+.at-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f2f4;
+}
+
+.at-item:last-child { border-bottom: none; }
+
+.at-item.collapsed .at-abstract,
+.at-item.collapsed .at-authors { display: none; }
+
+/* ===== Hanging number ===== */
+.at-num {
+  flex-shrink: 0;
+  width: 40px;
+  text-align: right;
+  padding-top: 0;
+  line-height: 1.4;
+}
+
+.at-num code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75em;
+  color: var(--color-text-muted);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* ===== Right column ===== */
+.at-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ===== Header row: title ===== */
+.at-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.at-title-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.at-title-title:hover { color: var(--color-accent); }
+.at-title-title.key_matched { color: #0550ae; }
+
+/* ===== Tags row ===== */
+.at-title-tags {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: calc(var(--font-size-main, 15px) * 0.8);
+  line-height: 1;
+  gap: 0;
+  margin: 1px 0;
+}
+
+.at-tag {
+  padding: 0.2em 0.4em;
+  border-radius: 0.4em;
+  margin-right: 0.2em;
+  color: white;
+}
+
+.at-arxiv-tag { background-color: brown; }
+.at-arxiv-tag:hover { text-decoration: none; color: white; }
+
+/* ===== Authors ===== */
+.at-authors {
+  font-size: calc(var(--font-size-main, 15px) * 0.82);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 2px 0;
+}
+
+.at-authors a {
+  color: rgba(0, 45, 114, 1);
+  text-decoration: none;
+  border-radius: 3px;
+}
+.at-authors a:not(:first-child) {
+  color: rgba(0, 45, 114, 0.4);
+  font-size: calc(var(--font-size-main, 15px) * 0.72);
+}
+.at-authors a:hover {
+  background-color: rgba(123, 176, 210, 0.51);
+}
+.at-authors a:not(:first-child)::before {
+  content: none;
+}
+.at-authors span {
+  color: rgba(0, 45, 114, 0.4);
+  font-size: calc(var(--font-size-main, 15px) * 0.72);
+}
+
+/* ===== Abstract ===== */
+.at-abstract {
+  font-size: 1.0em;
+  line-height: 1.65;
+  color: var(--color-text);
+  overflow-x: auto;
+  margin-top: 1px;
+}
+
+.at-abstract code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+}
+
+/* keyword highlight */
+mark {
+  background: #fff176;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ===== Date badge in section title ===== */
+.at-badge {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* ===== Error message ===== */
+.at-error {
+  padding: 16px;
+  background: #fff3f3;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #b91c1c;
+  margin-bottom: 16px;
+}
+
+/* ===== Main content font (--font-main from new_all.css) ===== */
+.at-body,
+.at-title-title,
+.at-authors,
+.at-abstract {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .at-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: flex !important;
+    flex-direction: column;
+    padding: 16px 16px 12px;
+  }
+
+  .at-sidebar .sidebar-name,
+  .at-sidebar .sidebar-affiliation,
+  .at-sidebar .sidebar-section-label,
+  #at-date-badge,
+  .at-sidebar > .sidebar-divider,
+  .at-sidebar > a.sidebar-link {
+    display: none;
+  }
+
+  .at-topic-toggles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .at-topic-btn {
+    width: auto;
+    padding: 4px 8px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .at-topic-count {
+    display: none;
+  }
+}
+

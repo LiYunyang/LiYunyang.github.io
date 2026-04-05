@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Yunyang Li"/>
+  <meta name="description" content="Astro Today – daily arXiv digest by Yunyang Li"/>
+  <link rel="shortcut icon" href="images/YL_blue.png"/>
+
+  <!-- Fonts & icons -->
+  <link rel="stylesheet" href="font/fontawesome-all.css"/>
+  <link rel="stylesheet" href="font/css/academicons.css"/>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'],['\\(','\\)']],
+        displayMath: [['$$','$$'],['\\[','\\]']],
+        processEscapes: true,
+        skipTags: ['script','noscript','style','textarea','pre']
+      }
+    });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- mark.js for keyword highlighting -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+    integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/astrotoday.css"/>
+  <title>Astro Today | Yunyang Li</title>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- ── Sidebar: topic toggles ── -->
+  <aside class="sidebar at-sidebar">
+    <div class="sidebar-name" style="margin-bottom:8px;">Astro Today</div>
+    <div class="sidebar-affiliation" style="margin-bottom:16px;">
+      Daily arXiv astro-ph digest
+    </div>
+
+    <hr class="sidebar-divider"/>
+
+    <!-- Date badge -->
+    <div id="at-date-badge" style="margin-bottom:12px; font-size:12px; color:var(--sidebar-text-muted);"></div>
+
+    <hr class="sidebar-divider"/>
+
+    <!-- Topic filter -->
+    <div class="sidebar-section-label">Filter by topic</div>
+    <div id="at-topic-toggles" class="at-topic-toggles"></div>
+
+    <hr class="sidebar-divider"/>
+
+    <!-- Back link at bottom -->
+    <a href="index.html" class="sidebar-link" style="margin-top:auto;">
+      <i class="fa fa-arrow-left sidebar-link-icon"></i>
+      <span>Back</span>
+    </a>
+  </aside>
+
+  <!-- ── Main content ── -->
+  <main class="main-content">
+
+    <nav class="nav-tabs-wrapper" aria-label="Page sections">
+      <ul class="nav-tabs">
+        <li><a href="index.html">← Home</a></li>
+        <li><a href="#at-new" class="active">New</a></li>
+        <li><a href="#at-crs">Cross-listed</a></li>
+      </ul>
+    </nav>
+
+    <!-- Loading indicator -->
+    <div id="at-loading" class="at-loading">
+      <i class="fa fa-circle-notch fa-spin"></i> Fetching latest arXiv listings…
+    </div>
+
+    <!-- New submissions -->
+    <section id="at-new" class="section-anchor">
+      <h2 class="section-title">
+        New Submissions
+        <span id="at-new-badge" class="at-badge"></span>
+      </h2>
+      <div id="at-new-list" class="at-list"></div>
+    </section>
+
+    <!-- Cross-listed -->
+    <section id="at-crs" class="section-anchor">
+      <h2 class="section-title">
+        Cross-listed
+        <span id="at-crs-badge" class="at-badge"></span>
+      </h2>
+      <div id="at-crs-list" class="at-list"></div>
+    </section>
+
+    <footer class="site-footer">
+      Yunyang Li &nbsp;·&nbsp; <a href="index.html">← Back to main page</a>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/astrotoday.js"></script>
+</body>
+</html>

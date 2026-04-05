@@ -105,6 +105,7 @@ def auto_categorize(a):
         else:
           for _ in a['authors'][index+1:]:
               if _.split(',')[0] < 'Li':
+                  print(_)
                   return "main-author"
           else:
               return "contrib-author"
