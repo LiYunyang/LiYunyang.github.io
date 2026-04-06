@@ -2,9 +2,10 @@
   'use strict';
 
   /* ── Config ─────────────────────────────────────────────────────────────── */
-  const PROXY     = 'https://cors-anywhere-for-yl.herokuapp.com/';
-  const ARXIV_URL = 'https://export.arxiv.org/list/astro-ph/new';
-
+  // const PROXY     = 'https://cors-anywhere-for-yl.herokuapp.com/';
+  // const PROXY     = 'https://arxiv-proxy.liyunyang95.workers.dev/';
+  // const ARXIV_URL = PROXY + 'https://export.arxiv.org/list/astro-ph/new';
+  const ARXIV_URL = 'https://arxiv-proxy.liyunyang95.workers.dev/';
   const KINDS = ['CO', 'HE', 'GA', 'IM', 'SR', 'EP'];
 
   const KIND_COLORS = {
@@ -75,7 +76,7 @@
     const loadEl = document.getElementById('at-loading');
     if (loadEl) loadEl.style.display = 'block';
 
-    fetch(PROXY + ARXIV_URL + '?nocache=' + Date.now())
+    fetch(ARXIV_URL + '?nocache=' + Date.now())
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.text();
