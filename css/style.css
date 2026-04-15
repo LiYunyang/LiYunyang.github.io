@@ -60,6 +60,16 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Inherits surrounding text color; underline only on hover */
+a.link-muted {
+    color: inherit;
+    text-decoration: none;
+}
+a.link-muted:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
 img {
     max-width: 100%;
     height: auto;

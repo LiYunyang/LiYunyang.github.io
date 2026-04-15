@@ -103,7 +103,15 @@
                     month: 'short', day: 'numeric', year: 'numeric'
                 });
                 const badge = document.getElementById('at-date-badge');
-                if (badge) badge.textContent = str;
+                if (badge) {
+                    badge.innerHTML = '';
+                    const a = document.createElement('a');
+                    a.href = 'https://export.arxiv.org/list/astro-ph/new';
+                    a.target = '_blank';
+                    a.className = 'link-muted';
+                    a.textContent = str;
+                    badge.appendChild(a);
+                }
                 const isToday = d >= new Date(new Date().setHours(0, 0, 0, 0));
                 const color = isToday ? '#27ae60' : '#c0392b';
                 ['at-new-badge', 'at-crs-badge'].forEach(function (id) {
