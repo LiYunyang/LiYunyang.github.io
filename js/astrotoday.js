@@ -64,15 +64,20 @@
 
     /* ── Fetch arXiv via CORS proxy ─────────────────────────────────────────── */
     function fetchAndRender() {
+        console.log('Fetching arXiv listings...');
         const loadEl = document.getElementById('at-loading');
         if (loadEl) loadEl.style.display = 'block';
 
-        fetch(ARXIV_URL + '?nocache=' + Date.now())
+        fetch(ARXIV_URL, { cache: 'no-store' })
             .then(function (res) {
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 return res.text();
             })
             .then(function (html) {
+                // Worker may return a plain-text error (e.g. "rate exceeded") instead of HTML
+                if (!html.includes('<dl')) {
+                    throw new Error(html.trim());
+                }
                 const doc = new DOMParser().parseFromString(html, 'text/html');
                 if (loadEl) loadEl.style.display = 'none';
                 renderAll(doc);
@@ -99,7 +104,7 @@
                 });
                 const badge = document.getElementById('at-date-badge');
                 if (badge) badge.textContent = str;
-                const isToday = d.getDate() >= new Date().getDate();
+                const isToday = d >= new Date(new Date().setHours(0, 0, 0, 0));
                 const color = isToday ? '#27ae60' : '#c0392b';
                 ['at-new-badge', 'at-crs-badge'].forEach(function (id) {
                     const el = document.getElementById(id);
@@ -300,9 +305,13 @@
 
     /* ── Error helper ────────────────────────────────────────────────────────── */
     function showError(msg) {
+        const cacheRelated = /rate.exceeded|rate.limit|too.many|cache|stale/i.test(msg);
+        const purgeLink = cacheRelated
+            ? ' <a href="' + ARXIV_URL + 'purge" target="_blank">Purge cache</a> then reload.'
+            : '';
         ['at-new-list', 'at-crs-list'].forEach(function (id) {
             const el = document.getElementById(id);
-            if (el) el.innerHTML = '<div class="at-error">' + msg + '</div>';
+            if (el) el.innerHTML = '<div class="at-error">' + msg + purgeLink + '</div>';
         });
     }
 
