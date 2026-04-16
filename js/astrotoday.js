@@ -2,10 +2,7 @@
     'use strict';
 
     /* ── Config ─────────────────────────────────────────────────────────────── */
-    // const PROXY     = 'https://cors-anywhere-for-yl.herokuapp.com/';
-    // const PROXY     = 'https://arxiv-proxy.liyunyang95.workers.dev/';
-    // const ARXIV_URL = PROXY + 'https://export.arxiv.org/list/astro-ph/new';
-    const ARXIV_URL = 'https://arxiv-proxy.liyunyang95.workers.dev/';
+    const RSS_URL = 'https://arxiv-proxy.liyunyang95.workers.dev/';
     const KINDS = ['CO', 'HE', 'GA', 'IM', 'SR', 'EP'];
 
     const KIND_COLORS = {
@@ -18,12 +15,11 @@
         other: 'rgba(20, 20, 20, 1)'
     };
     const KEYWORDS = ['gravitational wave', 'fast radio burst', 'cosmic microwave background', 'CMB', 'delensing', 'CMB lensing', 'Hubble Constant', 'Hubble Tension', 'cosmology', 'B-mode', 'E-mode', 'polarization', 'inflation', 'weak lensing', "Sunyaev-Zel'dovich", 'Sunyaev-Zeldovich', "Sunyaev Zel'dovich", 'concordance', 'baryon acoustic oscillations', '21 cm', '21-cm', 'dark energy', 'dark matter', 'anomalous microwave emission', 'Planck', 'map-making', 'line-intensity mapping',];
-
-    const KEYWORDS_CASE = ['CLASS', 'WMAP', 'ACT', 'SPT', 'BICEP', 'CMB', 'SZ', 'Simons Observatory', 'S4', 'CMB-S4', 'SO', "LIM",];
+    const KEYWORDS_CASE = ['CLASS', 'WMAP', 'ACT', 'SPT', 'BICEP', 'CMB', 'SZ', 'Simons Observatory', 'S4', 'CMB-S4', 'SO', 'LIM',];
 
     /* ── State ──────────────────────────────────────────────────────────────── */
     const activeFilters = new Set();
-    const totalKindCounts = {};   // accumulated across both sections
+    const totalKindCounts = {};
 
     /* ── Bootstrap ──────────────────────────────────────────────────────────── */
     window.addEventListener('load', function () {
@@ -55,103 +51,129 @@
             btn.appendChild(dot);
             btn.appendChild(label);
             btn.appendChild(count);
-            btn.addEventListener('click', function () {
-                toggleKind(k);
-            });
+            btn.addEventListener('click', function () { toggleKind(k); });
             box.appendChild(btn);
         });
     }
 
-    /* ── Fetch arXiv via CORS proxy ─────────────────────────────────────────── */
+    /* ── Fetch & render ─────────────────────────────────────────────────────── */
     function fetchAndRender() {
-        console.log('Fetching arXiv listings...');
         const loadEl = document.getElementById('at-loading');
         if (loadEl) loadEl.style.display = 'block';
 
-        fetch(ARXIV_URL, { cache: 'no-store' })
+        fetch(RSS_URL, { cache: 'no-store' })
             .then(function (res) {
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 return res.text();
             })
-            .then(function (html) {
-                // Worker may return a plain-text error (e.g. "rate exceeded") instead of HTML
-                if (!html.includes('<dl')) {
-                    throw new Error(html.trim());
-                }
-                const doc = new DOMParser().parseFromString(html, 'text/html');
+            .then(function (text) {
+                const xmlDoc = new DOMParser().parseFromString(text, 'text/xml');
+                if (xmlDoc.getElementsByTagName('parsererror').length) throw new Error('Invalid RSS XML');
                 if (loadEl) loadEl.style.display = 'none';
-                renderAll(doc);
+                renderAll(xmlDoc);
             })
             .catch(function (err) {
                 if (loadEl) loadEl.style.display = 'none';
-                showError('Could not fetch arXiv listings: ' + err.message);
+                showError('Could not fetch arXiv RSS: ' + err.message);
             });
     }
 
-    /* ── Render both sections ────────────────────────────────────────────────── */
-    function renderAll(doc) {
-        const dls = doc.getElementsByTagName('dl');
-        const h3s = doc.getElementsByTagName('h3');
-
-        // Parse and show date
-        if (h3s.length > 0) {
-            const match = h3s[0].textContent.match(/for\s+(.+)/);
-            if (match) {
-                const d = new Date(match[1]);
+    /* ── Render all sections ────────────────────────────────────────────────── */
+    function renderAll(xmlDoc) {
+        const channel = xmlDoc.getElementsByTagName('channel')[0];
+        if (channel) {
+            const pubDateStr = getText(channel, 'pubDate');
+            if (pubDateStr) {
+                const d = new Date(pubDateStr);
                 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-                const str = days[d.getDay()] + ', ' + d.toLocaleDateString('en-US', {
-                    month: 'short', day: 'numeric', year: 'numeric'
+                // Use UTC getters: pubDate is midnight Eastern (-04/05), which is still
+                // the same calendar date in UTC. Local getters shift it to the previous day
+                // for viewers west of Eastern time.
+                const str = days[d.getUTCDay()] + ', ' + d.toLocaleDateString('en-US', {
+                    timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric'
                 });
                 const badge = document.getElementById('at-date-badge');
                 if (badge) {
                     badge.innerHTML = '';
                     const a = document.createElement('a');
-                    a.href = 'https://export.arxiv.org/list/astro-ph/new';
+                    a.href = 'https://rss.arxiv.org/rss/astro-ph';
                     a.target = '_blank';
                     a.className = 'link-muted';
                     a.textContent = str;
                     badge.appendChild(a);
                 }
-                const isToday = d >= new Date(new Date().setHours(0, 0, 0, 0));
+                const isToday = d.toISOString().slice(0, 10) === new Date().toISOString().slice(0, 10);
                 const color = isToday ? '#27ae60' : '#c0392b';
-                ['at-new-badge', 'at-crs-badge'].forEach(function (id) {
+                ['at-new-badge', 'at-crs-badge', 'at-rep-badge'].forEach(function (id) {
                     const el = document.getElementById(id);
-                    if (el) {
-                        el.textContent = str;
-                        el.style.color = color;
-                    }
+                    if (el) { el.textContent = str; el.style.color = color; }
                 });
             }
         }
 
-        if (dls[0]) populateList('at-new-list', dls[0], 'new');
-        if (dls[1]) populateList('at-crs-list', dls[1], 'crs');
+        const grouped = parseItems(xmlDoc);
+        renderItems('at-new-list', grouped['new'],     'new');
+        renderItems('at-crs-list', grouped['cross'],   'crs');
+        renderItems('at-rep-list', grouped['replace'], 'rep');
     }
 
-    /* ── Populate one paper list ─────────────────────────────────────────────── */
-    function populateList(containerId, dl, section) {
+    /* ── Parse RSS items into { new, cross, replace } ───────────────────────── */
+    function parseItems(xmlDoc) {
+        const items = xmlDoc.getElementsByTagName('item');
+        const result = { new: [], cross: [], replace: [] };
+
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+
+            const title   = getText(item, 'title');
+            const link    = getText(item, 'link');
+            const arxivId = link.split('/abs/').pop() || '';
+
+            // Strip "arXiv:ID Announce Type: TYPE\nAbstract: " preamble
+            const rawDesc = getText(item, 'description');
+            const abstract = rawDesc
+                .replace(/^arXiv:\S+\s+Announce Type:\s*\S+[\s\S]*?Abstract:\s*/i, '')
+                .trim();
+
+            // Categories from one or more <category>astro-ph.CO</category>
+            const catEls = item.getElementsByTagName('category');
+            const cats = [];
+            for (let j = 0; j < catEls.length; j++) {
+                const sub = catEls[j].textContent.trim().split('.').pop();
+                cats.push(KINDS.includes(sub) ? sub : 'other');
+            }
+            if (!cats.length) cats.push('other');
+
+            // Authors from <dc:creator>Name1, Name2</dc:creator>
+            const creatorsText = getText(item, 'dc:creator');
+            const authors = creatorsText
+                ? creatorsText.split(',').map(function (name) {
+                    const n = name.trim();
+                    return { name: n, href: 'https://arxiv.org/search/?query=' + encodeURIComponent(n) + '&searchtype=author' };
+                })
+                : [];
+
+            const announceType = getText(item, 'arxiv:announce_type').trim();
+            // arXiv types: new | cross | replace | replace-cross
+            const bucket = announceType === 'new'                    ? 'new'
+                         : announceType === 'cross'                  ? 'cross'
+                         : announceType.startsWith('replace')        ? 'replace'
+                         : 'new';
+            result[bucket].push({ arxivId, title, cats, authors, abstract });
+        }
+        return result;
+    }
+
+    /* ── Render one list ────────────────────────────────────────────────────── */
+    function renderItems(containerId, items, section) {
         const container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = '';
+        const total = items.length;
 
-        const dts = dl.getElementsByTagName('dt');
-        const dds = dl.getElementsByTagName('dd');
-        const total = dds.length;
+        items.forEach(function (paper, i) {
+            const { arxivId, title, cats, authors, abstract } = paper;
 
-        for (let i = 0; i < total; i++) {
-            const id = dts[i].getElementsByTagName('a')[1].id;
-
-            /* ── Determine categories ── */
-            const subjEl = dds[i].getElementsByClassName('list-subjects')[0];
-            const subjText = subjEl ? subjEl.textContent : '';
-            const catMatches = subjText.match(/\(.*?\.\S*?\)/g) || [];
-            const cats = catMatches.map(function (c) {
-                const sub = c.slice(-3, -1);
-                return KINDS.includes(sub) ? sub : (c.match(/\..*?\)/g) || ['other'])[0].slice(1, -1);
-            });
-            if (!cats.length) cats.push('other');
-
-            /* count per kind — accumulate totals across both sections */
             cats.forEach(function (c) {
                 if (KINDS.includes(c)) {
                     totalKindCounts[c] = (totalKindCounts[c] || 0) + 1;
@@ -160,13 +182,10 @@
                 }
             });
 
-            /* ── Build item ── */
             const item = document.createElement('div');
             item.className = 'at-item';
-            item.id = section + '-' + id;
-            cats.forEach(function (c) {
-                item.classList.add('at-kind-' + c);
-            });
+            item.id = section + '-' + arxivId;
+            cats.forEach(function (c) { item.classList.add('at-kind-' + c); });
 
             /* number */
             const numEl = document.createElement('div');
@@ -178,22 +197,19 @@
             /* title */
             const titleTitle = document.createElement('div');
             titleTitle.className = 'at-title-title';
-            const rawTitle = dds[i].getElementsByClassName('list-title')[0];
-            titleTitle.textContent = rawTitle ? rawTitle.textContent.replace(/^\s*Title:\s*/i, '').trim() : '';
-            titleTitle.addEventListener('click', function () {
-                item.classList.toggle('collapsed');
-            });
+            titleTitle.textContent = title;
+            titleTitle.addEventListener('click', function () { item.classList.toggle('collapsed'); });
 
             /* tags */
             const tagsRow = document.createElement('div');
             tagsRow.className = 'at-title-tags';
 
             const pdfTag = document.createElement('a');
-            pdfTag.href = 'https://arxiv.org/pdf/' + id;
+            pdfTag.href = 'https://arxiv.org/pdf/' + arxivId;
             pdfTag.target = '_blank';
             pdfTag.title = 'PDF';
             const pdfCode = document.createElement('code');
-            pdfCode.textContent = id;
+            pdfCode.textContent = arxivId;
             pdfTag.appendChild(pdfCode);
             pdfTag.classList.add('at-tag', 'at-arxiv-tag');
             tagsRow.appendChild(pdfTag);
@@ -209,29 +225,24 @@
             /* authors */
             const authorsEl = document.createElement('div');
             authorsEl.className = 'at-authors';
-            const authorLinks = dds[i].getElementsByClassName('list-authors')[0];
-            if (authorLinks) {
-                const as = authorLinks.getElementsByTagName('a');
-                for (let j = 0; j < as.length; j++) {
-                    const a = document.createElement('a');
-                    a.href = 'https://export.arxiv.org' + as[j].getAttribute('href');
-                    a.target = '_blank';
-                    a.textContent = as[j].textContent;
-                    if (j > 0) {
-                        const sep = document.createElement('span');
-                        sep.textContent = '; ';
-                        sep.style.color = 'var(--color-text-muted)';
-                        authorsEl.appendChild(sep);
-                    }
-                    authorsEl.appendChild(a);
+            authors.forEach(function (author, j) {
+                if (j > 0) {
+                    const sep = document.createElement('span');
+                    sep.textContent = '; ';
+                    sep.style.color = 'var(--color-text-muted)';
+                    authorsEl.appendChild(sep);
                 }
-            }
+                const a = document.createElement('a');
+                a.href = author.href;
+                a.target = '_blank';
+                a.textContent = author.name;
+                authorsEl.appendChild(a);
+            });
 
             /* abstract */
             const abstractEl = document.createElement('div');
             abstractEl.className = 'at-abstract';
-            const ps = dds[i].getElementsByTagName('p');
-            abstractEl.textContent = ps.length ? ps[0].textContent.trim() : '';
+            abstractEl.textContent = abstract;
 
             /* keyword highlighting */
             const marker = new Mark(abstractEl);
@@ -239,18 +250,14 @@
                 separateWordSearch: false,
                 accuracy: 'exactly',
                 ignorePunctuation: ':;.,-–—‒_(){}[]!\'"+='.split(''),
-                done: function (n) {
-                    if (n > 0) titleTitle.classList.add('key_matched');
-                }
+                done: function (n) { if (n > 0) titleTitle.classList.add('key_matched'); }
             });
             marker.mark(KEYWORDS_CASE, {
                 separateWordSearch: false,
                 accuracy: 'exactly',
                 caseSensitive: true,
                 ignorePunctuation: ':;.,-–—‒_(){}[]!\'"+='.split(''),
-                done: function (n) {
-                    if (n > 0) titleTitle.classList.add('key_matched');
-                }
+                done: function (n) { if (n > 0) titleTitle.classList.add('key_matched'); }
             });
 
             /* MathJax */
@@ -259,17 +266,16 @@
                 MathJax.Hub.Queue(['Typeset', MathJax.Hub, abstractEl]);
             }
 
-            /* header row */
-            const header = document.createElement('div');
-            header.className = 'at-header';
-
+            /* assemble */
             const titleWrap = document.createElement('div');
             titleWrap.className = 'at-title';
             titleWrap.appendChild(titleTitle);
             titleWrap.appendChild(tagsRow);
+
+            const header = document.createElement('div');
+            header.className = 'at-header';
             header.appendChild(titleWrap);
 
-            /* right-column body */
             const body = document.createElement('div');
             body.className = 'at-body';
             body.appendChild(header);
@@ -279,10 +285,16 @@
             item.appendChild(numEl);
             item.appendChild(body);
             container.appendChild(item);
-        }
+        });
     }
 
-    /* ── Topic filter toggle ─────────────────────────────────────────────────── */
+    /* ── Helpers ─────────────────────────────────────────────────────────────── */
+    function getText(el, tagName) {
+        const found = el.getElementsByTagName(tagName)[0];
+        return found ? found.textContent : '';
+    }
+
+    /* ── Topic filter ────────────────────────────────────────────────────────── */
     function toggleKind(kind) {
         const btn = document.getElementById('at-toggle-' + kind);
         if (activeFilters.has(kind)) {
@@ -300,10 +312,7 @@
     function applyFilters() {
         const items = document.querySelectorAll('.at-item');
         items.forEach(function (item) {
-            if (activeFilters.size === 0) {
-                item.style.display = '';
-                return;
-            }
+            if (activeFilters.size === 0) { item.style.display = ''; return; }
             const visible = [...activeFilters].some(function (k) {
                 return item.classList.contains('at-kind-' + k);
             });
@@ -311,15 +320,11 @@
         });
     }
 
-    /* ── Error helper ────────────────────────────────────────────────────────── */
+    /* ── Error ───────────────────────────────────────────────────────────────── */
     function showError(msg) {
-        const cacheRelated = /rate.exceeded|rate.limit|too.many|cache|stale/i.test(msg);
-        const purgeLink = cacheRelated
-            ? ' <a href="' + ARXIV_URL + 'purge" target="_blank">Purge cache</a> then reload.'
-            : '';
-        ['at-new-list', 'at-crs-list'].forEach(function (id) {
+        ['at-new-list', 'at-crs-list', 'at-rep-list'].forEach(function (id) {
             const el = document.getElementById(id);
-            if (el) el.innerHTML = '<div class="at-error">' + msg + purgeLink + '</div>';
+            if (el) el.innerHTML = '<div class="at-error">' + msg + '</div>';
         });
     }
 
