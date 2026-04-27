@@ -147,10 +147,11 @@
             // Authors from <dc:creator>Name1, Name2</dc:creator>
             const creatorsText = getText(item, 'dc:creator');
             const authors = creatorsText
-                ? creatorsText.split(',').map(function (name) {
+                ? creatorsText.replace(/\s*\([^)]*\)?/g, '').split(',').map(function (name) {
                     const n = name.trim();
+                    if (!n) return null;
                     return { name: n, href: 'https://arxiv.org/search/?query=' + encodeURIComponent(n) + '&searchtype=author' };
-                })
+                }).filter(Boolean)
                 : [];
 
             const announceType = getText(item, 'arxiv:announce_type').trim();
