@@ -153,35 +153,6 @@ def touch():
     current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     new_comment = f'Updated on {current_date}'
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(script_dir, '../Publications.html')
-    if os.path.exists(file_path):
-        with open(file_path, 'r') as file:
-            lines = file.readlines()
-
-        # Find and update the last commented line
-        with open(file_path, 'w') as file:
-            found = False
-            for i in range(len(lines) - 1, -1, -1):
-                if lines[i].strip().startswith('<!--'):
-                    last_comment_index = i
-                    found = True
-                    break
-
-            # Update the last comment line
-            if found:
-                # Ensure comment is closed properly
-                if lines[last_comment_index].strip().endswith('-->'):
-                    lines[last_comment_index] = f'<!-- {new_comment} -->\n'
-                else:
-                    # Add the closing tag if missing
-                    lines[last_comment_index] = f'<!-- {new_comment} -->\n'
-            else:
-                # If no comments are found, add a new comment
-                lines.append(f'<!-- {new_comment} -->\n')
-
-            file.writelines(lines)
-    else:
-        print(f"File {file_path} does not exist.")
 
 if __name__ == "__main__":
     new_list = update_pub_list()
