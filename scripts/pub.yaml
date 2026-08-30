@@ -1,4 +1,16 @@
 main-author:
+    -   title: CMB Lensing Reconstruction Using Two Years of Temperature Data from the SPT-3G Summer Survey
+        authors: ['Levy, K.', 'Raghunathan, S.', 'Guidi, F.', YL, 'Anderes, E.', 'Anderson, A. J.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bleem, L. E.', 'Bocquet, S.', 'Bouchet, F. R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carron, J.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Crawford, T. M.', 'Daley, C.', 'de Haan, T.', 'Dibert, K. R.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Foster, A.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', 'Ge, F.', 'Guns, S.', 'Halverson, N. W.', 'Hivon, E.', 'Holder, G. P.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', 'Jhaveri, T.', "K\xE9ruzor\xE9, F.", 'Khalife, A. R.', 'Knox, L.', 'Kornoelje, K.', 'Kuo, C.-L.', 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Maccarone, T. J.', 'Maniyar, A. S.', 'Martsen, E. S.', 'Menanteau, F.', 'Millea, M.', 'Montgomery, J.', 'Nakato, Y.', 'Natoli, T.', 'Ouellette, A.', 'Pan, Z.', 'Paschos, P.', 'Phadke, K. A.', 'Pollak, A. W.', 'Prabhu, K.', 'Quan, W.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Rouble, M.', 'Ruhl, J. E.', 'Silva Oliveira, A. C.', 'Simpson, A.', 'Sobrin, J. A.', 'Stark, A. A.', 'Stephen, J.', 'Tandoi, C.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vitrier, A.', 'Wan, Y.', 'Whitehorn, N.', 'Wu, W. L. K.', 'Young, M. R.', 'Zebrowski, J. A.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260705784L
+        doi: 10.48550/arXiv.2607.05784
+        arxiv: '2607.05784'
+        date: 2026/07
+        bibcode: 2026arXiv260705784L
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2607.05784.pdf
     -   title: A Measurement of the Largest-scale CMB E-mode Polarization with CLASS
         authors: [YL, CLASS Collaboration]
         year: 2025
@@ -9,7 +21,7 @@ main-author:
         arxiv: '2501.11904'
         date: 2025/06
         bibcode: 2025ApJ...986..111L
-        citation: 20
+        citation: 22
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2025ApJ...986..111L/PUB_PDF
     -   title: CLASS Angular Power Spectra and Map-component Analysis for 40 GHz Observations through 2022
         authors: ['Eimer, Joseph R.', YL, CLASS Collaboration]
@@ -45,9 +57,9 @@ main-author:
         arxiv: '2305.01045'
         date: 2023/10
         bibcode: 2023ApJ...956...77L
-        citation: 11
+        citation: 12
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2023ApJ...956...77L/PUB_PDF
-    -   title: Constraining Cosmic Microwave Background Temperature Evolution With Sunyaev-Zel&#x27;Dovich Galaxy Clusters from the Atacama Cosmology Telescope
+    -   title: Constraining Cosmic Microwave Background Temperature Evolution With Sunyaev-Zel'Dovich Galaxy Clusters from the Atacama Cosmology Telescope
         authors: [YL, 'Hincks, Adam D.', ACT Collaboration]
         year: 2021
         journal: ApJ
@@ -81,7 +93,7 @@ main-author:
         arxiv: '1911.00391'
         date: 2020/02
         bibcode: 2020ApJ...889..105P
-        citation: 27
+        citation: 28
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2020ApJ...889..105P/PUB_PDF
     -   title: 'Calvera: A Low-mass Strangeon Star Torqued by Debris Disk?'
         authors: [YL, 'Wang, Weiyang', 'Ge, Mingyu', 'Liu, Xiongwei', 'Tong, Hao', 'Xu, Renxin']
@@ -108,7 +120,91 @@ main-author:
         citation: 42
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2017ApJ...849..105L/PUB_PDF
 contrib-author:
-    -   title: "Measurement of the Full Shape of the Thermal Sunyaev\u2500Zel&#x27;dovich Power Spectrum from the South Pole Telescope and Herschel\u2500SPIRE Observations"
+    -   title: 'SPT-3G D1: Foreground-Robust Lensing Templates for Primordial Gravitational Wave Searches'
+        authors: ['Nakato, Y.', 'Wu, W. L. K.', 'Omori, Y.', 'Anderes, E.', 'Anderson, A. J.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Barry, P. S.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bleem, L. E.', 'Bocquet, S.', 'Bouchet, F. R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carron, J.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Crawford, T. M.', 'Daley, C.', 'de Haan, T.', 'Dibert, K. R.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Foster, A.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', 'Ge, F.', 'Guidi, F.', 'Guns, S.', 'Halverson, N. W.', 'Hivon, E.', 'Holder, G. P.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', 'Jhaveri, T.', "K\xE9ruzor\xE9, F.", 'Khalife, A. R.', 'Knox, L.', 'Kornoelje, K.', 'Kuo, C.-L.', 'Levy, K.', YL, 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Maccarone, T. J.', 'Maniyar, A. S.', 'Martsen, E. S.', 'Menanteau, F.', 'Millea, M.', 'Montgomery, J.', 'Natoli, T.', 'Ouellette, A.', 'Pan, Z.', 'Paschos, P.', 'Phadke, K. A.', 'Prabhu, K.', 'Quan, W.', 'Raghunathan, S.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Rouble, M.', 'Ruhl, J. E.', 'Silva Oliveira, A. C.', 'Simpson, A.', 'Sobrin, J. A.', 'Stark, A. A.', 'Stephen, J.', 'Tandoi, C.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vitrier, A.', 'Wan, Y.', 'Whitehorn, N.', 'Young, M. R.', 'Zebrowski, J. A.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260806343N
+        doi: 10.48550/arXiv.2608.06343
+        arxiv: '2608.06343'
+        date: 2026/08
+        bibcode: 2026arXiv260806343N
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2608.06343.pdf
+    -   title: 'SPT-3G D1: Compton-y maps using data from the SPT-3G and Planck surveys'
+        authors: ['Maniyar, A. S.', 'Bianchini, F.', 'Wu, W. L. K.', 'Raghunathan, S.', SPT-3G Collaboration]
+        year: 2026
+        journal: PhRvD
+        issue: 114,023534
+        url: https://ui.adsabs.harvard.edu/abs/2026PhRvD.114b3534M
+        doi: 10.1103/7mdh-jpd3
+        arxiv: '2602.11279'
+        date: 2026/07
+        bibcode: 2026PhRvD.114b3534M
+        citation: 2
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2026PhRvD.114b3534M/PUB_PDF
+    -   title: Galaxy Clusters Selected via the Sunyaev-Zel'dovich Effect in 5 year data from the SPT-3G Main Survey
+        authors: ['Bleem, L. E.', 'Klein, M.', 'Kornoelje, K.', 'Bocquet, S.', 'Sobrin, J. A.', 'Aguena, M.', 'Anderes, E.', 'Anderson, A. J.', 'Andrade-Oliveira, F.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Barry, P. S.', 'Bayliss, M.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bouchet, F. R.', 'Brooks, D.', 'Burke, D. L.', 'Calzadilla, M.', 'Camilleri, R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carnero Rosell, A.', 'Carretero, J.', 'Carron, J.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Costanzi, M.', 'Crawford, T. M.', 'da Costa, L. N.', 'Daley, C.', 'Davis, T. M.', 'de Haan, T.', 'De Vicente, J.', 'Desai, S.', 'Dibert, K. R.', 'Diehl, H. T.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Everett, S.', 'Evrard, G.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Flaugher, B.', 'Floyd, B.', 'Fosdick, K.', 'Foster, A.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', "Garc\xEDa-Bellido, J.", 'Ge, F.', 'Gladders, M. D.', 'Grandis, S.', 'Guidi, F.', 'Guns, S.', 'Gutierrez, G.', 'Halverson, N. W.', 'Hinton, S. R.', 'Hivon, E.', 'Holder, G. P.', 'Hollowood, D. L.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', 'Jhaveri, T.', 'Kent, S.', "K\xE9ruzor\xE9, F.", 'Khalife, A. R.', 'Khullar, G.', 'Knox, L.', 'Kuehn, K.', 'Kuo, C.-L.', 'Lahav, O.', 'Levy, K.', YL, 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Maccarone, T. J.', 'Mahler, G.', 'Maniyar, A. S.', 'Marshall, J. L.', 'Martsen, E. S.', 'McDonald, M.', "Mena-Fern\xE1ndez, J.", 'Menanteau, F.', 'Millea, M.', 'Miquel, R.', 'Mohr, J. J.', 'Montgomery, J.', 'Myles, J.', 'Nakato, Y.', 'Natoli, T.', 'Nichol, R. C.', 'Novosad, V.', 'Ogando, R. L. C.', 'Omori, Y.', 'Ouellette, A.', 'Pan, Z.', 'Phadke, K. A.', "Plazas Malag\xF3n, A. A.", 'Pollak, A. W.', 'Porredon, A.', 'Prabhu, K.', 'Prat, J.', 'Quan, W.', 'Raghunathan, S.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Romer, A. K.', 'Rouble, M.', 'Ruhl, J. E.', 'Sanchez, E.', 'Sanchez Cid, D.', 'Schrabback, T.', 'Sevilla-Noarbe, I.', 'Silva Oliveira, A. C.', 'Simpson, A.', 'Somboonpanyakul, T.', 'Stark, A. A.', 'Suchyta, E.', 'Swanson, M. E. C.', 'Tandoi, C.', 'To, C.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vikram, V.', 'Vitrier, A.', 'Wan, Y.', 'Weaverdyck, N.', 'Weller, J.', 'Whitehorn, N.', 'Wu, W. L. K.', 'Young, M. R.', 'Zebrowski, J. A.', 'Zhan, J.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260701175B
+        doi: 10.48550/arXiv.2607.01175
+        arxiv: '2607.01175'
+        date: 2026/07
+        bibcode: 2026arXiv260701175B
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2607.01175.pdf
+    -   title: Characterization of the Polarization Beam Response of SPT-3G Using Point Sources
+        authors: ['de Haan, T.', 'Archipley, M.', 'Huang, N.', SPT-3G Collaboration]
+        year: 2026
+        journal: OJAp
+        issue: 9,65326
+        url: https://ui.adsabs.harvard.edu/abs/2026OJAp....965326D
+        doi: 10.33232/001c.165326
+        arxiv: '2602.06334'
+        date: 2026/07
+        bibcode: 2026OJAp....965326D
+        citation: 1
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2026OJAp....965326D/PUB_PDF
+    -   title: Polarization Angle Swings in Blazars Detected in the Millimeter-wave with the South Pole Telescope
+        authors: ['Simpson, A.', 'Anderes, E.', 'Anderson, A. J.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Barry, P. S.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bleem, L. E.', 'Bocquet, S.', 'Bouchet, F. R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carron, J.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Crawford, T. M.', 'Daley, C.', 'de Haan, T.', 'Dibert, K. R.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Foster, A.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', 'Ge, F.', 'Guidi, F.', 'Guns, S.', 'Halverson, N. W.', 'Hincks, A. D.', 'Hivon, E.', 'Holder, G. P.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', "J\xE4rvel\xE4, E.", 'Jhaveri, T.', "K\xE9ruzor\xE9, F.", 'Khalife, A. R.', 'Knox, L.', 'Kornoelje, K.', 'Kuo, C.-L.', 'Levy, K.', YL, 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Ma, X.', 'Maccarone, T. J.', 'Madejski, G.', 'Maniyar, A. S.', 'Martsen, E. S.', 'Menanteau, F.', 'Millea, M.', 'Montgomery, J.', 'Nakato, Y.', 'Natoli, T.', 'Ouellette, A.', 'Pan, Z.', 'Phadke, K. A.', 'Pollak, A. W.', 'Prabhu, K.', 'Quan, W.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Rouble, M.', 'Ruhl, J. E.', 'Silva Oliveira, A. C.', 'Sobrin, J. A.', 'Stark, A. A.', 'Tandoi, C.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vitrier, A.', 'Wan, Y.', 'Whitehorn, N.', 'Wu, W. L. K.', 'Young, M. R.', 'Zebrowski, J. A.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260800302S
+        doi: 10.48550/arXiv.2608.00302
+        arxiv: '2608.00302'
+        date: 2026/07
+        bibcode: 2026arXiv260800302S
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2608.00302.pdf
+    -   title: Cross-correlation of SPT-3G D1 CMB lensing and DES Y3 galaxy lensing
+        authors: ['Ouellette, A.', 'Omori, Y.', 'Anderes, E.', 'Anderson, A. J.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bleem, L. E.', 'Bocquet, S.', 'Bouchet, F. R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carron, J.', 'Chang, C.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Crawford, T. M.', 'Daley, C.', 'de Haan, T.', 'Dibert, K. R.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Foster, A.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', 'Ge, F.', 'Guidi, F.', 'Guns, S.', 'Halverson, N. W.', 'Hivon, E.', 'Holder, G. P.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', 'Jhaveri, T.', "K\xE9ruzor\xE9, F.", 'Khalife, A. R.', 'Knox, L.', 'Kornoelje, K.', 'Kuo, C.-L.', 'Levy, K.', YL, 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Maccarone, T. J.', 'Maniyar, A. S.', 'Martsen, E. S.', 'Menanteau, F.', 'Millea, M.', 'Montgomery, J.', 'Nakato, Y.', 'Natoli, T.', 'Pan, Z.', 'Paschos, P.', 'Phadke, K. A.', 'Pollak, A. W.', 'Prabhu, K.', 'Quan, W.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Rouble, M.', 'Ruhl, J. E.', 'Silva Oliveira, A. C.', 'Simpson, A.', 'Sobrin, J. A.', 'Stark, A. A.', 'Stephen, J.', 'Tandoi, C.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vitrier, A.', 'Wan, Y.', 'Whitehorn, N.', 'Wu, W. L. K.', 'Young, M. R.', 'Zebrowski, J. A.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260626223O
+        doi: 10.48550/arXiv.2606.26223
+        arxiv: '2606.26223'
+        date: 2026/06
+        bibcode: 2026arXiv260626223O
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2606.26223.pdf
+    -   title: Millimeter-wave Detections of Symbiotic Stars in SPT and ACT Data
+        authors: ['Tandoi, C.', 'Foster, A.', 'Maccarone, T. J.', 'Anderson, A. J.', 'Ansarinejad, B.', 'Archipley, M.', 'Balkenhol, L.', 'Barron, D. R.', 'Benabed, K.', 'Bender, A. N.', 'Benson, B. A.', 'Bianchini, F.', 'Bleem, L. E.', 'Bocquet, S.', 'Bouchet, F. R.', 'Camphuis, E.', 'Campitiello, M. G.', 'Carlstrom, J. E.', 'Carron, J.', 'Chang, C. L.', 'Chichura, P. M.', 'Chokshi, A.', 'Chou, T.-L.', 'Coerver, A.', 'Crawford, T. M.', 'Daley, C.', 'de Haan, T.', 'Dibert, K. R.', 'Dobbs, M. A.', 'Doohan, M.', 'Dutcher, D.', 'Feng, C.', 'Ferguson, K. R.', 'Ferree, N. C.', 'Fichman, K.', 'Galli, S.', 'Gambrel, A. E.', 'Gao, A. K.', 'Ge, F.', 'Guidi, F.', 'Guns, S.', 'Halverson, N. W.', 'Hivon, E.', 'Holder, G. P.', 'Holzapfel, W. L.', 'Hood, J. C.', 'Hryciuk, A.', 'Huang, N.', 'Jhaveri, T.', 'Keruzore, F.', 'Khalife, A. R.', 'Knox, L.', 'Kornoelje, K.', 'Kuo, C.-L.', 'Levy, K.', YL, 'Lowitz, A. E.', 'Lu, C.', 'Lynch, G. P.', 'Maniyar, A. S.', 'Martsen, E. S.', 'Menanteau, F.', 'Millea, M.', 'Montgomery, J.', 'Nakato, Y.', 'Natoli, T.', 'Ouellette, A.', 'Pan, Z.', 'Paschos, P.', 'Phadke, K. A.', 'Pollak, A. W.', 'Prabhu, K.', 'Quan, W.', 'Rahimi, M.', 'Rahlin, A.', 'Reichardt, C. L.', 'Rouble, M.', 'Ruhl, J. E.', 'Silva Oliveira, A. C.', 'Simpson, A.', 'Sobrin, J. A.', 'Stark, A. A.', 'Stephen, J.', 'Trendafilova, C.', 'Vieira, J. D.', 'Vieregg, A. G.', 'Vitrier, A.', 'Wan, Y.', 'Whitehorn, N.', 'Wu, W. L. K.', 'Young, M. R.', 'Zebrowski, J. A.']
+        year: 2026
+        journal: arXiv
+        issue: null
+        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260501022T
+        doi: 10.48550/arXiv.2605.01022
+        arxiv: '2605.01022'
+        date: 2026/05
+        bibcode: 2026arXiv260501022T
+        citation: 0
+        pdf_url: https://arxiv.org/pdf/2605.01022.pdf
+    -   title: Measurement of the Full Shape of the Thermal Sunyaev-Zel'dovich Power Spectrum from the South Pole Telescope and Herschel-SPIRE Observations
         authors: ['Raghunathan, S.', SPTpol/SPT-3G Collaboration]
         year: 2026
         journal: ApJL
@@ -118,7 +214,7 @@ contrib-author:
         arxiv: '2602.10107'
         date: 2026/05
         bibcode: 2026ApJ..1002L..22R
-        citation: 4
+        citation: 7
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2026ApJ..1002L..22R/PUB_PDF
     -   title: 'SPT-3G D1: Maps of the millimeter-wave sky from 2019 and 2020 observations of the SPT-3G Main field'
         authors: ['Quan, W.', 'Camphuis, E.', 'Daley, C.', 'Huang, N.', 'Omori, Y.', 'Guidi, F.', 'Anderes, E.', SPT-3G Collaboration]
@@ -130,32 +226,8 @@ contrib-author:
         arxiv: '2603.20163'
         date: 2026/03
         bibcode: 2026arXiv260320163Q
-        citation: 8
+        citation: 10
         pdf_url: https://arxiv.org/pdf/2603.20163.pdf
-    -   title: Characterization of the Polarization Beam Response of SPT-3G Using Point Sources
-        authors: ['de Haan, T.', 'Archipley, M.', 'Huang, N.', SPT-3G Collaboration]
-        year: 2026
-        journal: arXiv
-        issue: null
-        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260206334D
-        doi: 10.48550/arXiv.2602.06334
-        arxiv: '2602.06334'
-        date: 2026/02
-        bibcode: 2026arXiv260206334D
-        citation: 1
-        pdf_url: https://arxiv.org/pdf/2602.06334.pdf
-    -   title: 'SPT-3G D1: Compton-$y$ maps using data from the SPT-3G and Planck surveys'
-        authors: ['Maniyar, A. S.', 'Bianchini, F.', 'Wu, W. L. K.', 'Raghunathan, S.', SPT-3G Collaboration]
-        year: 2026
-        journal: arXiv
-        issue: null
-        url: https://ui.adsabs.harvard.edu/abs/2026arXiv260211279M
-        doi: 10.48550/arXiv.2602.11279
-        arxiv: '2602.11279'
-        date: 2026/02
-        bibcode: 2026arXiv260211279M
-        citation: 2
-        pdf_url: https://arxiv.org/pdf/2602.11279.pdf
     -   title: 'SPT-3G D1: A Measurement of Secondary Cosmic Microwave Background Anisotropy Power'
         authors: ['Chaubal, P.', 'Huang, N.', 'Reichardt, C. L.', SPT-3G Collaboration]
         year: 2026
@@ -166,7 +238,7 @@ contrib-author:
         arxiv: '2601.20551'
         date: 2026/01
         bibcode: 2026arXiv260120551C
-        citation: 5
+        citation: 6
         pdf_url: https://arxiv.org/pdf/2601.20551.pdf
     -   title: 'SPT-3G D1: Constraints on inflationary gravitational waves with two years of SPT-3G data'
         authors: ['Zebrowski, J. A.', 'Reichardt, C. L.', SPT-3G Collaboration]
@@ -178,7 +250,7 @@ contrib-author:
         arxiv: '2505.02827'
         date: 2025/12
         bibcode: 2025PhRvD.112l3520Z
-        citation: 18
+        citation: 21
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2025PhRvD.112l3520Z/PUB_PDF
     -   title: Towards constraining cosmological parameters with SPT-3G observations of 25% of the sky
         authors: ['Vitrier, A.', 'Fichman, K.', 'Balkenhol, L.', 'Camphuis, E.', 'Guidi, F.', SPT-3G Collaboration]
@@ -190,7 +262,7 @@ contrib-author:
         arxiv: '2510.24669'
         date: 2025/10
         bibcode: 2025arXiv251024669V
-        citation: 5
+        citation: 6
         pdf_url: https://arxiv.org/pdf/2510.24669.pdf
     -   title: 'PROTOCALC, a W-band Polarized Calibrator for Cosmic Microwave Background Telescopes: Application to Simons Observatory and CLASS'
         authors: ['Coppi, Gabriele', 'Dachlythra, Nadia', 'Nati, Federico', "D\xFCnner-Planella, Rolando", 'Adler, Alexandre E.', 'Errard, Josquin', 'Galitzki, Nicholas', YL, 'Petroff, Matthew A.', 'Simon, Sara M.', 'Sang, Ema Tsang King', 'Aguilar, Amalia Villarrubia', 'Wollack, Edward J.', 'Zannoni, Mario']
@@ -202,7 +274,7 @@ contrib-author:
         arxiv: '2502.14473'
         date: 2025/07
         bibcode: 2025ApJS..279...30C
-        citation: 10
+        citation: 11
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2025ApJS..279...30C/PUB_PDF
     -   title: High-efficiency and Low-noise Detectors for the Upgraded CLASS 90 GHz Focal Plane
         authors: ["N\xFA\xF1ez, Carolina", CLASS Collaboration]
@@ -227,18 +299,6 @@ contrib-author:
         bibcode: 2024SPIE13102E..17D
         citation: 1
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024SPIE13102E..17D/PUB_PDF
-    -   title: Sensitivity-improved Polarization Maps at 40 GHz with CLASS and WMAP Data
-        authors: ['Shi, Rui', CLASS Collaboration]
-        year: 2024
-        journal: ApJ
-        issue: 971,41
-        url: https://ui.adsabs.harvard.edu/abs/2024ApJ...971...41S
-        doi: 10.3847/1538-4357/ad5313
-        arxiv: '2404.17567'
-        date: 2024/08
-        bibcode: 2024ApJ...971...41S
-        citation: 2
-        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJ...971...41S/PUB_PDF
     -   title: 'Cosmology Large Angular Scale Surveyor (CLASS): 90 GHz Telescope Pointing, Beam Profile, Window Function, and Polarization Performance'
         authors: ['Datta, Rahul', 'Brewer, Michael K.', 'Denes Couto, Jullianna', 'Eimer, Joseph', YL, CLASS Collaboration]
         year: 2024
@@ -251,6 +311,18 @@ contrib-author:
         bibcode: 2024ApJS..273...26D
         citation: 10
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJS..273...26D/PUB_PDF
+    -   title: Sensitivity-improved Polarization Maps at 40 GHz with CLASS and WMAP Data
+        authors: ['Shi, Rui', CLASS Collaboration]
+        year: 2024
+        journal: ApJ
+        issue: 971,41
+        url: https://ui.adsabs.harvard.edu/abs/2024ApJ...971...41S
+        doi: 10.3847/1538-4357/ad5313
+        arxiv: '2404.17567'
+        date: 2024/08
+        bibcode: 2024ApJ...971...41S
+        citation: 2
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2024ApJ...971...41S/PUB_PDF
     -   title: Microwave Observations of Venus with CLASS
         authors: ['Dahal, Sumit', CLASS Collaboration]
         year: 2023
@@ -273,7 +345,7 @@ contrib-author:
         arxiv: '2206.05920'
         date: 2023/03
         bibcode: 2023ApJ...945...79S
-        citation: 12
+        citation: 14
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2023ApJ...945...79S/PUB_PDF
     -   title: Calibration of Transition-edge Sensor (TES) Bolometer Arrays with Application to CLASS
         authors: ['Appel, John W.', CLASS Collaboration]
@@ -297,7 +369,7 @@ contrib-author:
         arxiv: '2107.08022'
         date: 2022/02
         bibcode: 2022ApJ...926...33D
-        citation: 37
+        citation: 38
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2022ApJ...926...33D/PUB_PDF
     -   title: 'Two Year Cosmology Large Angular Scale Surveyor (CLASS) Observations: Long Timescale Stability Achieved with a Front-end Variable-delay Polarization Modulator at 40 GHz'
         authors: ['Harrington, Kathleen', CLASS Collaboration]
@@ -311,18 +383,6 @@ contrib-author:
         bibcode: 2021ApJ...922..212H
         citation: 20
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2021ApJ...922..212H/PUB_PDF
-    -   title: The Extended Distribution of Baryons around Galaxies
-        authors: ['Bregman, Joel N.', 'Anderson, Michael E.', 'Miller, Matthew J.', 'Hodges-Kluck, Edmund', 'Dai, Xinyu', 'Li, Jiang-Tao', YL, 'Qu, Zhijie']
-        year: 2018
-        journal: ApJ
-        issue: 862,3
-        url: https://ui.adsabs.harvard.edu/abs/2018ApJ...862....3B
-        doi: 10.3847/1538-4357/aacafe
-        arxiv: '1803.08963'
-        date: 2018/07
-        bibcode: 2018ApJ...862....3B
-        citation: 149
-        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018ApJ...862....3B/PUB_PDF
     -   title: The optical/UV excess of X-ray-dim isolated neutron star II. Nonuniformity of plasma on a strangeon star surface
         authors: ['Wang, Wei-Yang', 'Feng, Yi', 'Lai, Xiao-Yu', YL, 'Lu, Ji-Guang', 'Chen, Xuelei', 'Xu, Ren-Xin']
         year: 2018
@@ -335,6 +395,18 @@ contrib-author:
         bibcode: 2018RAA....18...82W
         citation: 9
         pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018RAA....18...82W/PUB_PDF
+    -   title: The Extended Distribution of Baryons around Galaxies
+        authors: ['Bregman, Joel N.', 'Anderson, Michael E.', 'Miller, Matthew J.', 'Hodges-Kluck, Edmund', 'Dai, Xinyu', 'Li, Jiang-Tao', YL, 'Qu, Zhijie']
+        year: 2018
+        journal: ApJ
+        issue: 862,3
+        url: https://ui.adsabs.harvard.edu/abs/2018ApJ...862....3B
+        doi: 10.3847/1538-4357/aacafe
+        arxiv: '1803.08963'
+        date: 2018/07
+        bibcode: 2018ApJ...862....3B
+        citation: 160
+        pdf_url: https://ui.adsabs.harvard.edu/link_gateway/2018ApJ...862....3B/PUB_PDF
     -   title: Merging strangeon stars
         authors: ['Lai, Xiao-Yu', 'Yu, Yun-Wei', 'Zhou, En-Ping', YL, 'Xu, Ren-Xin']
         year: 2018

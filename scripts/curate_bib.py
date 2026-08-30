@@ -4,6 +4,7 @@ import json
 import re 
 import shutil
 import os
+import html
 from datetime import datetime
 
 ads_api_key = 'KGN8XH9gR0yBKrqq0ErccGMnYomNlszLoFAAy6kn'
@@ -13,6 +14,23 @@ headers = {'Authorization': f'Bearer {ads_api_key}'}
 
 my_name = ['Li, Yunyang', 'Li, Y.', 'Li, Y.-Y.', 'Li, Yun-Yang']
 max_author_num = 5
+
+
+def clean_title(title):
+    """Normalize ADS HTML/math markup into a readable plain-text title."""
+    title = html.unescape(title)
+    title = re.sub(r"<[^>]+>", "", title)
+    title = title.translate(str.maketrans({
+        "\u2010": "-",
+        "\u2011": "-",
+        "\u2012": "-",
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u2015": "-",
+        "\u2500": "-",
+    }))
+    return re.sub(r"\s+", " ", title).strip()
+
 
 def format_author_list(author_list_raw):
     """format the author list """
@@ -61,6 +79,8 @@ def fetch_from_ads():
             key = key.strip().lower()
             if key == 'authors':
                 entry_dict[key] = format_author_list(re.split('; and |; | and ', val.strip()))
+            elif key == 'title':
+                entry_dict[key] = clean_title(val.strip())
             elif key in ('year', 'citation'):
                 entry_dict[key] = int(val.strip())
             elif key=='date':
