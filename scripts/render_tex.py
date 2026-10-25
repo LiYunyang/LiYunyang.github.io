@@ -55,9 +55,10 @@ def render_section(name, pub_list):
         else:
             return ', '.join(d['issue'].split(','))
 
-    return html.unescape(template.render(name=name, pub_list=pub_list, f1=join_authors, f2=f2,
-                                         latex_escape=latex_escape,
-                                         trim_blocks=True, lstrip_blocks=True))
+    rendered = html.unescape(template.render(name=name, pub_list=pub_list, f1=join_authors, f2=f2,
+                                             latex_escape=latex_escape,
+                                             trim_blocks=True, lstrip_blocks=True))
+    return "\n".join(line.rstrip() for line in rendered.split("\n"))
 
 
 def get_stats(pub_dict):
@@ -82,4 +83,5 @@ with open('pub.yaml', 'r') as f:
 with open("output.tex", "w") as f:
     f.write(render_citation(pub_dict))
     f.write(render_section("AS MAIN AUTHOR", pub_dict['main-author']))
-    f.write(render_section("AS CONTRIBUTING COAUTHOR", pub_dict['contrib-author']))
+    f.write(render_section("AS CONTRIBUTING AUTHOR", pub_dict['contrib-author']))
+    f.write(render_section("AS COLLABORATION AUTHOR", pub_dict['collab-author']))

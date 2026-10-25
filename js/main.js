@@ -171,7 +171,8 @@
   function loadPublications() {
     const mainContainer = document.getElementById('pub-main-author');
     const contribContainer = document.getElementById('pub-contrib-author');
-    if (!mainContainer && !contribContainer) return;
+    const collabContainer = document.getElementById('pub-collab-author');
+    if (!mainContainer && !contribContainer && !collabContainer) return;
 
     fetch('scripts/pub.yaml')
       .then(function (res) {
@@ -182,6 +183,7 @@
         const data = jsyaml.load(yamlText);
         if (data['main-author']) renderPubs(data['main-author'], mainContainer);
         if (data['contrib-author']) renderPubs(data['contrib-author'], contribContainer);
+        if (data['collab-author']) renderPubs(data['collab-author'], collabContainer);
         // Re-run MathJax over newly injected content
         if (window.MathJax) {
           MathJax.Hub.Queue(['Typeset', MathJax.Hub]);

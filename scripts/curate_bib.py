@@ -108,27 +108,32 @@ def open_current_list():
     return cur_list
 
 def compare_two_entry(a, b):
-    if a.get('arxiv', 'True') == b.get('arxiv', 'False'):
-        return True
-    elif a.get('doi', 'True') == b.get('doi', 'False'):
-        return True
-    else:
-        return False
+    # A record can gain a DOI or a new bibcode as it moves from arXiv to a
+    # journal. Match on any stable identifier so its current YAML list remains
+    # the manual category after a refresh.
+    for key in ('doi', 'arxiv', 'bibcode', 'url'):
+        a_value = a.get(key)
+        b_value = b.get(key)
+        if a_value and b_value and str(a_value).strip().casefold() == str(b_value).strip().casefold():
+            return True
+    return False
 
 def auto_categorize(a):
     if 'YL' not in a['authors']:
         return "unknown"
-    else:
-        index = a['authors'].index('YL')
-        if index < 2:
-            return "main-author"
-        else:
-          for _ in a['authors'][index+1:]:
-              if _.split(',')[0] < 'Li':
-                  print(_)
-                  return "main-author"
-          else:
-              return "contrib-author"
+
+    index = a['authors'].index('YL')
+    if index == 0:
+        return "main-author"
+    if index == 1:
+        return "contrib-author"
+
+    # A later surname before Li signals that YL belongs to the named lead
+    # authors rather than the alphabetized collaboration list.
+    for author in a['authors'][index + 1:]:
+        if author.split(',')[0] < 'Li':
+            return "contrib-author"
+    return "collab-author"
 
 
 def update_pub_list():
@@ -138,14 +143,19 @@ def update_pub_list():
     for entry in raw_list:
         if entry.get('journal', None) == 'SPIE':
             entry['issue'] = entry['issue'].split(',')[1].strip(' ')
-        matched=False
+        matched = False
         for k, v in cur_list.items():
             for _v in v:
                 if compare_two_entry(entry, _v):
-                    # new_list[k].append(_v)
+                    # The list containing the existing entry is the manual
+                    # category. Do not send a matched entry through the
+                    # automatic author-order rule.
                     entry['authors'] = _v['authors']
                     new_list[k].append(entry)
                     matched = True
+                    break
+            if matched:
+                break
         if not matched:
             new_list[auto_categorize(entry)].append(entry)
     
