@@ -66,8 +66,6 @@
   // ── Publication loader ────────────────────────────────────────────────────
   loadPublications();
 
-  const maxVisibleAuthors = 5;
-
   function escapeHtml(value) {
     return String(value)
       .replace(/&/g, '&amp;')
@@ -81,30 +79,22 @@
     return /\bCollaboration$/.test(author);
   }
 
-  function formatAuthor(author) {
+  function formatAuthor(author, hasYL) {
     if (author === 'YL') return '<b>Li, Yunyang</b>';
-    if (isCollaboration(author)) return '<b>' + escapeHtml(author) + '</b>';
+    if (isCollaboration(author) && !hasYL) return '<b>' + escapeHtml(author) + '</b>';
     return escapeHtml(author);
   }
 
   function joinAuthors(authors) {
     if (authors.length === 0) return '';
 
-    const visibleAuthors = authors.slice(0, maxVisibleAuthors);
-    const mapped = visibleAuthors.map(formatAuthor);
-    const hiddenCount = authors.length - visibleAuthors.length;
-    const visibleText = mapped.length === 1
+    const hasYL = authors.includes('YL');
+    const mapped = authors.map(function (author) {
+      return formatAuthor(author, hasYL);
+    });
+    return mapped.length === 1
       ? mapped[0]
       : mapped.slice(0, -1).join('; ') + ' &amp; ' + mapped[mapped.length - 1];
-
-    if (hiddenCount > 0) {
-      const label = '+ ' + hiddenCount + ' author' + (hiddenCount === 1 ? '' : 's');
-      const hasHiddenYL = authors.slice(maxVisibleAuthors).includes('YL');
-      const moreText = hasHiddenYL ? '<b>' + label + '</b>' : label;
-      return visibleText + '; <span class="pub-author-more">' + moreText + '</span>';
-    }
-
-    return visibleText;
   }
 
   function buildPubItem(pub) {
